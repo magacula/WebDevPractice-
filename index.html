@@ -1,0 +1,72 @@
+<!-- EMMENT extension: 
+  use "!"" to create a boilerplate html skeleton structure 
+  use "." after tag as a shortcut to name a class
+  user "#" after tag as a shortcut to name id
+-->
+
+<!-- HTML Snippets and Shortcuts 
+  ** TYPE a, div, doc, img, etc for shortcut in setting up tag **
+
+-->
+
+<!DOCTYPE html>
+<!-- all HTML documents need to declare a document type (html) -->
+<html lang="en">
+  <!-- the html doc itself need to declare a starting and ending html tag -->
+  <!-- the head is the "root element" that includes meta data about the html doc (title of web page, author, size of doc etc) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koi's First Webpage!</title>
+  </head>
+
+  <!-- the body contains the visible part of the doc -->
+  <body>
+    <!-- h1 is an example of a heading, it is the largest or most important heading (h1-h6) 
+        font-size: a CSS property of the style attribute that specifies the size of the font
+    -->
+    <h1 style="font-size: 60px;">What's Poppin!</h1>
+
+    <!-- a tag allows us to define an html link -->
+    <a href="https://www.google.com/"> This is a link to google.com </a>
+
+    <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph -->
+    <!-- attributes provide additional information of a HTML element (always specified in the start tag)
+        style attribute specifies the style of the text (color, font, size, etc)
+    -->
+    <p class="intro info" style="font-weight: 300; color: coral;">
+      This is the first contents of my webpage
+    </p>
+
+    <!-- This is an example of an image tag
+      - src: the source, or specified path for the image to be displayed
+      - alt : stands for alternate text. This is an additional attribute to retrieve the 
+      text description of the image if the image does not load or display properly 
+      - width / height: specify the image size in pixels 
+    -->
+
+    <img
+      src="https://bostonglobe-prod.cdn.arcpublishing.com/resizer/rswG0ieZcbL8SZayuyhzWMKRXFw=/1440x0/arc-anglerfish-arc2-prod-bostonglobe.s3.amazonaws.com/public/SUEEDAU4MBDCRN3QN4N25C6LFA"
+      alt="Last Dance' reminds Scott Burrell how awed he was by Michael ..."
+      width="313"
+      height="235"
+    />
+
+    <!-- example of a paragraph tag with Lorem filler text
+      title of an html element provides additional information about the element
+      when moused over the element, the user can view the title as a tooltip
+    -->
+    <p
+      class="main-content"
+      title="This is a tooltip for this paragraph element"
+    >
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat esse ea
+      suscipit, beatae libero dolorum odit quibusdam, at repellendus facilis
+      numquam quisquam. Voluptas sint consequatur nam suscipit odit, quos
+      obcaecati. <br />
+      <!-- This is line break tag that signifies the end of a paragraph and to start a new line -->
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+      ipsam dicta quas quia rerum ex harum blanditiis maiores quisquam
+    </p>
+  </body>
+</html>
