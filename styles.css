@@ -2,3 +2,13 @@ h1 {
   text-align: center;
   color: darkcyan;
 }
+
+th {
+  background-color: rgb(145, 182, 194);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
