@@ -30,6 +30,11 @@
     <!-- 
       font-family: lists fonts we want. 1st font is our chosen font we want to be displayed
       All fonts that follow are the "back up" fonts just in case the browser can't display the first font specified
+
+      ****
+      "#" stands for ID
+      "." stands for class
+      *****
     -->
     <style>
       h2 {
@@ -39,7 +44,22 @@
 
       div {
         font-family: Arial, sans-serif;
-        border: 10px solid lightseagreen;
+      }
+
+      #top {
+        font-size: 36px;
+      }
+
+      #middle {
+        font-size: 24px;
+      }
+
+      #bottom {
+        font-size: 12px;
+      }
+
+      .name {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -130,7 +150,7 @@
     th: represents headers (columns)
     td: the data within the headers
     -->
-    <h3>Family Member Names and Age</h3>
+    <h3 style="background-color: linen;">Family Member Names and Age</h3>
     <table
       border="2px solid black"
       style="border-collapse: collapse; width: 50%;"
@@ -156,5 +176,17 @@
         <td>11</td>
       </tr>
     </table>
+
+    <!-- 
+      Here we are using divs with various id to distinguish different sections of our code
+      so we may perform specific styles to sections of our div without changing the whole thing
+
+      Then we use the span tag which is always a nested element. Within this span we 
+      can declare a class, where we can manipulate certain parts of the text in various
+      elements with the same class name
+    -->
+    <div id="top">This is the <span class="name"> top </span> div</div>
+    <div id="middle">This is the <span class="name"> middle </span> div</div>
+    <div id="bottom">This is the <span class="name"> bottom </span> div</div>
   </body>
 </html>
