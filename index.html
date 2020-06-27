@@ -29,7 +29,7 @@
     <!-- ** can specify styles of certain html elements on our web page by including style tag in the header ** -->
     <style>
       h2 {
-        text-align: center;
+        text-align: left;
         color: darkred;
       }
     </style>
@@ -98,7 +98,17 @@
       <li>Third</li>
     </ol>
 
-    <h2>This is a test header</h2>
+    <!-- div just refers to division of our code, a certain section we may want nest elements in 
+      - the div in this case would be the gray border 
+      - margin: is the space of outside of an element between the edge of the webpage
+      - padding: space on the inside of an element between the content and that element's border
+    -->
+
+    <div>
+      <h2 style="background-color: lightgrey; margin: 50px; padding: 20px;">
+        This is a test header
+      </h2>
+    </div>
 
     <!-- This is a form that a user can fill out -->
     <form action="">
