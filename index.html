@@ -27,10 +27,19 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- ** can specify styles of certain html elements on our web page by including style tag in the header ** -->
+    <!-- 
+      font-family: lists fonts we want. 1st font is our chosen font we want to be displayed
+      All fonts that follow are the "back up" fonts just in case the browser can't display the first font specified
+    -->
     <style>
       h2 {
         text-align: left;
         color: darkred;
+      }
+
+      div {
+        font-family: Arial, sans-serif;
+        border: 10px solid lightseagreen;
       }
     </style>
   </head>
@@ -111,9 +120,38 @@
     </div>
 
     <!-- This is a form that a user can fill out -->
-    <form action="">
+    <form action="" style="margin: 20px;">
       <input type="text" placeholder="Full Name" name="name" />
       <button>Submit!</button>
     </form>
+
+    <!-- table tag
+    tr: represents a row
+    th: represents headers (columns)
+    td: the data within the headers
+    -->
+    <h3>Family Member Names and Age</h3>
+    <table border="2px solid black">
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Makoi</td>
+        <td>Gacula</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>Makai</td>
+        <td>Gacula</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>Joesph</td>
+        <td>Kim</td>
+        <td>11</td>
+      </tr>
+    </table>
   </body>
 </html>
