@@ -1,10 +1,10 @@
-<!-- EMMENT extension: 
+<!-- EMMENT extension shortcuts: 
   use "!"" to create a boilerplate html skeleton structure 
   use "." after tag as a shortcut to name a class
   use "#" after tag as a shortcut to name id
   
-  ordered & unordered lists
-  ex) ul or ol > li * (number of list items)
+  ordered & unordered lists 
+  ex) ul OR ol>li * (number of list items)
 -->
 
 <!-- HTML Snippets and Shortcuts 
@@ -30,7 +30,16 @@
     <!-- h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
         font-size: a CSS property of the style attribute that specifies the size of the font
     -->
-    <h1 style="font-size: 60px;">What's Poppin!</h1>
+    <h1
+      style="
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+        color: darkcyan;
+      "
+    >
+      What's Poppin!
+    </h1>
 
     <!-- the a tag allows us to define an html link -->
     <p>
@@ -42,7 +51,7 @@
     <!-- attributes provide additional information of a HTML element (always specified in the start tag)
         style attribute specifies the style of the text (color, font, size, etc)
     -->
-    <p class="intro info" style="font-weight: 300; color: coral;">
+    <p class="intro info">
       This is the first contents of my webpage
     </p>
 
@@ -50,10 +59,12 @@
       - src: the source, or specified path for the image to be displayed
       - alt : stands for alternate text. This is an additional attribute to retrieve the 
       text description of the image if the image does not load or display properly 
-      - width / height: specify the image size in pixels 
-    -->
+      - width / height: specify the image size to a fixed amount (pixels)
+          - a trick is to use a percentage to make image responsive to different window sizes 
+            ex) 50% of the width of the web page
+        -->
 
-    <img src="assests/self.jpg" alt="self portrait" width="800" height="500" />
+    <img src="assests/self.jpg" alt="self portrait" width="50%" />
 
     <!-- example of a paragraph tag with Lorem filler text
       title of an html element provides additional information about the element
@@ -85,5 +96,11 @@
       <li>Second</li>
       <li>Third</li>
     </ol>
+
+    <!-- This is a form that a user can fill out -->
+    <form action="">
+      <input type="text" placeholder="Full Name" name="name" />
+      <button>Submit!</button>
+    </form>
   </body>
 </html>
