@@ -1,3 +1,3 @@
 # -WebDevPractice-
 
-This repo will be used to store files.. as I teach myself the basics of Front-End Web Dev
+This repo will be used to store files.. as I develop skills for Front-End Web Dev
