@@ -71,21 +71,24 @@
     -->
     <h1 style="font-size: 60px; font-weight: 600;">What's Poppin!</h1>
 
-    <!-- the a tag allows us to define an html link -->
+    <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph
+        attributes provide additional information of a HTML element (always specified in the start tag)
+        style attribute specifies the style of the text (color, font, size, etc)
+    -->
+
+    <!-- the "a" tag allows us to define an html link -->
     <p>
       This is a link to google:
       <a href="https://www.google.com/"> Click Here </a>
     </p>
 
-    <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph -->
-    <!-- attributes provide additional information of a HTML element (always specified in the start tag)
-        style attribute specifies the style of the text (color, font, size, etc)
-    -->
-    <p class="intro info">
-      This is the first contents of my webpage
-    </p>
+    <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
+    <main>
+      <p class="intro info">
+        This is the first contents of my webpage
+      </p>
 
-    <!-- This is an example of an image tag
+      <!-- This is an example of an image tag
       - src: the source, or specified path for the image to be displayed
       - alt : stands for alternate text. This is an additional attribute to retrieve the 
       text description of the image if the image does not load or display properly 
@@ -94,25 +97,25 @@
             ex) 50% of the width of the web page
         -->
 
-    <img src="assests/self.jpg" alt="self portrait" width="50%" />
+      <img src="assests/self.jpg" alt="self portrait" width="50%" />
 
-    <!-- example of a paragraph tag with Lorem filler text
+      <!-- example of a paragraph tag with Lorem filler text
       title of an html element provides additional information about the element
       when moused over the element, the user can view the title as a tooltip
     -->
-    <p
-      class="main-content"
-      title="This is a tooltip for this paragraph element"
-    >
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat esse ea
-      suscipit, beatae libero dolorum odit quibusdam, at repellendus facilis
-      numquam quisquam. Voluptas sint consequatur nam suscipit odit, quos
-      obcaecati. <br />
-      <!-- This is line break tag that signifies the end of a paragraph and to start a new line -->
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
-      ipsam dicta quas quia rerum ex harum blanditiis maiores quisquam
-    </p>
-
+      <p
+        class="main-content"
+        title="This is a tooltip for this paragraph element"
+      >
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat esse
+        ea suscipit, beatae libero dolorum odit quibusdam, at repellendus
+        facilis numquam quisquam. Voluptas sint consequatur nam suscipit odit,
+        quos obcaecati. <br />
+        <!-- This is line break tag that signifies the end of a paragraph and to start a new line -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+        ipsam dicta quas quia rerum ex harum blanditiis maiores quisquam
+      </p>
+    </main>
     <!-- This is an ex. of ordered / unordered lists -->
     <p>Unordered Lists</p>
     <ul>
