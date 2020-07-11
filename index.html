@@ -121,7 +121,12 @@
             ex) 50% of the width of the web page
         -->
       <a href="https://www.linkedin.com/in/makoigacula/">
-        <img src="assests/self.jpg" alt="self portrait" width="50%" />
+        <img
+          src="assests/self.jpg"
+          alt="self portrait"
+          width="50%"
+          title="https://www.linkedin.com/in/makoigacula/"
+        />
       </a>
 
       <!-- example of a paragraph tag with Lorem filler text
@@ -167,16 +172,24 @@
       </h2>
     </div>
 
-    <!-- This is a form that a user can fill out -->
+    <!-- This is a form that a user can fill out to submit data to the server 
+        -You can specify where to send this data by using the action attribute
+        and providing the the url to send to
+        - ** "required" attribute requires the user to enter text in the textfield or they 
+          are unable to submit the form
+        ex) <form action="/the-url-to-send-data-to"> </form>
+    -->
     <form action="" style="margin: 20px;">
-      <input type="text" placeholder="Full Name" name="name" />
-      <button>Submit!</button>
+      <!-- input tag allows us to get input from the user and to create a textfield -->
+      <input type="text" placeholder="Full Name" name="Name Field" required />
+      <!-- button tag allows us to do something with info added in the textfield -->
+      <button type="submit">Submit!</button>
     </form>
 
     <!-- table tag
-    tr: represents a row
-    th: represents headers (columns)
-    td: the data within the headers
+          tr: represents a row
+          th: represents headers (columns)
+          td: the data within the headers
     -->
     <h3 style="background-color: linen;">Family Member Names and Age</h3>
     <table
@@ -217,6 +230,9 @@
     <div id="middle">This is the <span class="name"> middle </span> div</div>
     <div id="bottom">This is the <span class="name"> bottom </span> div</div>
 
-    <footer id="footer">CopyRight Makoi Gacula</footer>
+    <!-- footers are used to outlines the author, copyright, contact info, etc. of webpage -->
+    <footer style="text-align: center;" id="footer">
+      CopyRight © Makoi Gacula
+    </footer>
   </body>
 </html>
