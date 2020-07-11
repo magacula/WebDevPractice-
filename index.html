@@ -79,12 +79,16 @@
     <!-- the "a" or anchor tag allows us to define an link 
         - href : points to the destination of a web address
         - needs to also include some anchor text for user to click on
-        - target : specifies where to open the link doc (ex. same tab, new tab, within a SVG image)
-    -->
+        - target : specifies where to open the link (ex. same tab, new tab, within a SVG image)
+                - _blank : new tab
+                - _self : opens the linked html doc in the same frame it was clicked
+                - _top : opens linked doc in the full body of the same window / tab
+      -->
 
     <p>
       This is a link to google:
-      <a href="https://www.google.com/"> Click Here </a>
+      <a href="https://www.google.com/" target="_self"> Click Here </a> and go
+      to Google
     </p>
 
     <!-- 
@@ -93,8 +97,14 @@
       external link to a exteranl web page while here we are using the link for internal sections
       
       -*** the #footer matches the id of the footer element bellow ***
+      - if there is no text following the hash in the link is considered a DEAD LINK
     -->
     <a href="#footer">Click to go to Bottom of Page</a>
+
+    <p>
+      This is a dead link:
+      <a href="#">Does Nothing</a>
+    </p>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
     <main>
