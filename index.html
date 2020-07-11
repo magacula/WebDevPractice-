@@ -76,11 +76,25 @@
         style attribute specifies the style of the text (color, font, size, etc)
     -->
 
-    <!-- the "a" tag allows us to define an html link -->
+    <!-- the "a" or anchor tag allows us to define an link 
+        - href : points to the destination of a web address
+        - needs to also include some anchor text for user to click on
+        - target : specifies where to open the link doc (ex. same tab, new tab, within a SVG image)
+    -->
+
     <p>
       This is a link to google:
       <a href="https://www.google.com/"> Click Here </a>
     </p>
+
+    <!-- 
+      Here, the href attribute takes a #(hash symbol) along w/ id of the element 
+      that we want to view on the same web page. The previous link is an example of a
+      external link to a exteranl web page while here we are using the link for internal sections
+      
+      -*** the #footer matches the id of the footer element bellow ***
+    -->
+    <a href="#footer">Click to go to Bottom of Page</a>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
     <main>
@@ -88,15 +102,16 @@
         This is the first contents of my webpage
       </p>
 
-      <!-- This is an example of an image tag
-      - src: the source, or specified path for the image to be displayed
-      - alt : stands for alternate text. This is an additional attribute to retrieve the 
-      text description of the image if the image does not load or display properly 
+      <!-- 
+        This is an example of an image tag (images are self closing & don't need a closing tag)
+        - src: the source, or specified path for the image to be displayed
+              (points to a specific point of the image's URL)
+        - alt : stands for alternate text. This is an additional attribute to retrieve the 
+              text description of the image if the image does not load or display properly 
       - width / height: specify the image size to a fixed amount (pixels)
           - a trick is to use a percentage to make image responsive to different window sizes 
             ex) 50% of the width of the web page
         -->
-
       <img src="assests/self.jpg" alt="self portrait" width="50%" />
 
       <!-- example of a paragraph tag with Lorem filler text
@@ -181,7 +196,7 @@
     </table>
 
     <!-- 
-      Here we are using divs with various id to distinguish different sections of our code
+      Here we are using divs with various id to uniquely identify elements of our code
       so we may perform specific styles to sections of our div without changing the whole thing
 
       Then we use the span tag which is always a nested element. Within this span we 
@@ -191,5 +206,7 @@
     <div id="top">This is the <span class="name"> top </span> div</div>
     <div id="middle">This is the <span class="name"> middle </span> div</div>
     <div id="bottom">This is the <span class="name"> bottom </span> div</div>
+
+    <footer id="footer">CopyRight Makoi Gacula</footer>
   </body>
 </html>
