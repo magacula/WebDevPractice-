@@ -242,12 +242,13 @@
     <div id="middle">This is the <span class="name"> middle </span> div</div>
     <div id="bottom">This is the <span class="name"> bottom </span> div</div>
 
-
+    <!-- **** TYPE OF INPUTS **** -->
     <!-- Radio buttons are a type of input button used typically for forms for user to choose
         only one answer out of a multiple choice question. A label is used to nest a input 
-        tag so that we can associate a certain option to be chosen. 
-        -**The id of the input must match the "for" attribute description for best coding practice
+        tag so that we can associate a certain input with that label
+        -** The "id" attribute of the input must MATCH the "for" attribute description for best coding practice
         -inputs are nested in label elements for assistive technologies to associate the two together
+        -** ALL inputs should share the same "name" attribute to help us identify the options under which question
     -->
     <h4>What is your favorite Sport?</h4>
     <label for="Basketball">
@@ -255,17 +256,26 @@
     </label>
 
     <label for="Football">
-      <input type="radio" name="sports" id="Football" />Football </input>
+      <input type="radio" name="sports" id="Football">Football </input>
     </label>
 
     <label for="Soccer">
-      <input type="radio" name="sports" id="Soccer" />Soccer </input>
+      <input type="radio" name="sports" id="Soccer">Soccer </input>
     </label>
 
-
-
-
-
+    <!-- Checkboxes are another type of input, but users are allowed to choose MORE THAN 1 answer -->
+    <p>
+      <label for="Basketball">
+        <input type="checkbox" name="personality" id="Basketball"> Do you like Basketball?</input>
+      </label>
+      <label for="Age">
+        <input type="checkbox" name="personality" id="Age"> Are you over 21 years old?</input>
+      </label>
+      <label for="Race">
+        <input type="checkbox" name="personality" id="Race"> Are you multi-ethnic?</input>
+      </label>
+    </p>
+  
 
 
 
