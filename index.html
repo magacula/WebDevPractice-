@@ -230,6 +230,26 @@
     <div id="middle">This is the <span class="name"> middle </span> div</div>
     <div id="bottom">This is the <span class="name"> bottom </span> div</div>
 
+
+    <!-- Radio buttons are a type of input button used typically in forms for user to choose
+        only one answer out of a multiple choice question. A label is used to nest a input 
+        tag so that we can associate a certain option to be chosen. 
+        -**The id of the input must match the "for" attribute description for best coding practice
+        -inputs are nested in label elements for assistive technologies to associate the two together
+    -->
+    <p>What is your favorite Sport?</p>
+    <label for="Basketball">
+      <input type="radio" name="sports" id="Basketball">Basketball </input>
+    </label>
+
+    <label for="Football">
+      <input type="radio" name="sports" id="Football" />Football </input>
+    </label>
+
+    <label for="Soccer">
+      <input type="radio" name="sports" id="Soccer" />Soccer </input>
+    </label>
+
     <!-- footers are used to outlines the author, copyright, contact info, etc. of webpage -->
     <footer style="text-align: center;" id="footer">
       CopyRight © Makoi Gacula
