@@ -175,21 +175,28 @@
     <!-- This is a form that a user can fill out to submit data to the server 
         -You can specify where to send this data by using the action attribute
         and providing the the url to send to
-        - ** "required" attribute requires the user to enter text in the textfield or they 
+        - *** "required" attribute requires the user to enter text in the textfield or they 
           are unable to submit the form
+        - *** the "name" attribute allows us to associate a certain input to a value when
+              retrieving it from the server
         ex) <form action="/the-url-to-send-data-to"> </form>
     -->
     <form action="" style="margin: 20px;">
       <!-- input tag allows us to get input from the user and to create a textfield -->
-      <input type="text" placeholder="Full Name" name="Name Field" required />
+      <!-- using the type password type tells the browser to hide our password and not display the screen while typing -->
+      <input type="text" placeholder="Enter username" name="username" required />
+      <input type="password" placeholder="Enter password" name="password" required>
       <!-- button tag allows us to do something with info added in the textfield -->
       <button type="submit">Submit!</button>
+
     </form>
 
     <!-- table tag
           tr: represents a row
           th: represents headers (columns)
           td: the data within the headers
+          thead: tag to nest headers
+          tbody: tag to nest the rows
     -->
     <h3 style="background-color: linen;">Family Member Names and Age</h3>
     <table
@@ -197,25 +204,30 @@
       style="border-collapse: collapse; width: 50%;"
     >
       <thead>
-        <th>First</th>
-        <th>Last</th>
-        <th>Age</th>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Age</th>
+        </tr>
       </thead>
-      <tr>
-        <td>Makoi</td>
-        <td>Gacula</td>
-        <td>21</td>
-      </tr>
-      <tr>
-        <td>Makai</td>
-        <td>Gacula</td>
-        <td>21</td>
-      </tr>
-      <tr>
-        <td>Joesph</td>
-        <td>Kim</td>
-        <td>11</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td>Makoi</td>
+          <td>Gacula</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>Makai</td>
+          <td>Gacula</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>Joesph</td>
+          <td>Kim</td>
+          <td>11</td>
+        </tr>
+      </tbody>
+      
     </table>
 
     <!-- 
@@ -231,7 +243,7 @@
     <div id="bottom">This is the <span class="name"> bottom </span> div</div>
 
 
-    <!-- Radio buttons are a type of input button used typically in forms for user to choose
+    <!-- Radio buttons are a type of input button used typically for forms for user to choose
         only one answer out of a multiple choice question. A label is used to nest a input 
         tag so that we can associate a certain option to be chosen. 
         -**The id of the input must match the "for" attribute description for best coding practice
@@ -249,6 +261,21 @@
     <label for="Soccer">
       <input type="radio" name="sports" id="Soccer" />Soccer </input>
     </label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- footers are used to outlines the author, copyright, contact info, etc. of webpage -->
     <footer style="text-align: center;" id="footer">
