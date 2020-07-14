@@ -249,30 +249,40 @@
         -** The "id" attribute of the input must MATCH the "for" attribute description for best coding practice
         -inputs are nested in label elements for assistive technologies to associate the two together
         -** ALL inputs should share the same "name" attribute to help us identify the options under which question
+        - type : the type of input
+        - name : the name in which we can use to identify the list of options that are all related by
+        - id : must match the same for the "for" attribute
+        - value: we need the value attribute to identify the option chosen to send to the server
+              **(if no value is given, by default, value is set to "on")**
     -->
     <h4>What is your favorite Sport?</h4>
-    <label for="Basketball">
-      <input type="radio" name="sports" id="Basketball">Basketball </input>
+    <label for="basketball">
+      <input type="radio" name="fav-sport" value="basketball" id="basketball">Basketball </input>
     </label>
 
-    <label for="Football">
-      <input type="radio" name="sports" id="Football">Football </input>
+    <label for="football">
+      <input type="radio" name="fav-sport" value="football" id="football">Football </input>
     </label>
 
-    <label for="Soccer">
-      <input type="radio" name="sports" id="Soccer">Soccer </input>
+    <label for="soccer">
+      <input type="radio" name="fav-sport" value="soccer" id="soccer">Soccer </input>
     </label>
 
     <!-- Checkboxes are another type of input, but users are allowed to choose MORE THAN 1 answer -->
     <p>
       <label for="Basketball">
-        <input type="checkbox" name="personality" id="Basketball"> Do you like Basketball?</input>
+        <input type="checkbox" name="personal-info" id="Basketball"> Do you like Basketball?</input>
       </label>
       <label for="Age">
-        <input type="checkbox" name="personality" id="Age"> Are you over 21 years old?</input>
+        <input type="checkbox" name="personal-info" id="Age"> Are you over 21 years old?</input>
       </label>
       <label for="Race">
-        <input type="checkbox" name="personality" id="Race"> Are you multi-ethnic?</input>
+        <input type="checkbox" name="personal-info" id="Race"> Are you multi-ethnic?</input>
+      </label>
+
+      <!-- we can use the checked attributes for checkboxes or radio buttons to be checked BY DEFAULT -->
+      <label for="gender">
+        <input type="checkbox" name="personal-info" value="male" id="gender" checked> Male</label>
       </label>
     </p>
   
