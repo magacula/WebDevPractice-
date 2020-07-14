@@ -7,26 +7,26 @@
   ex) ul OR ol>li * (number of list items)
 -->
 
-<!-- HTML Snippets and Shortcuts 
-  ** TYPE a, div, doc, img, etc for shortcut in setting up tag **
-
--->
-
+<!-- the DOCTYPE tag is used to tell the browser which version of html to use for this document -->
 <!DOCTYPE html>
 <!-- all HTML documents need to declare a document type (html) to tell the browser which version of html we're using  -->
 <html lang="en">
   <!-- the html doc itself need to declare a starting and ending html tag 
       the starting html tag signifies the start of the document
   -->
-  <!-- the head is the "root element" that includes meta data about the html doc (title of web page, author, size of doc etc) -->
+  <!-- the head is the "root element" that includes meta data about the html doc 
+    (title of web page, author, size of doc etc) --- title, link, meta, style...
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koi's First Webpage!</title>
     <!-- link tag allows us to link another file (style.css which is a stylesheet document) -->
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;900&display=swap" rel="stylesheet">
 
-    <!-- ** can specify styles of certain html elements on our web page by including style tag in the header ** -->
+    <!-- ** HERE we are using CSS selectors in the style tag ***
+        allows us to specify styles of certain html elements on our web page by including this style tag in the header -->
     <!-- 
       font-family: lists fonts we want. 1st font is our chosen font we want to be displayed
       All fonts that follow are the "back up" fonts just in case the browser can't display the first font specified
@@ -67,7 +67,7 @@
   <!-- the body contains the visible part of the doc -->
   <body>
     <!-- h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
-        font-size: a CSS property of the style attribute that specifies the size of the font
+        font-size: is a CSS property of the style attribute that specifies the size of the font
     -->
     <h1 style="font-size: 60px; font-weight: 600;">What's Poppin!</h1>
 
@@ -231,6 +231,8 @@
     </table>
 
     <!-- 
+      div - or division tags are used as containers for elements if we want various section on our page
+
       Here we are using divs with various id to uniquely identify elements of our code
       so we may perform specific styles to sections of our div without changing the whole thing
 
@@ -269,7 +271,7 @@
     </label>
 
     <!-- Checkboxes are another type of input, but users are allowed to choose MORE THAN 1 answer -->
-    <p>
+    <div>
       <label for="Basketball">
         <input type="checkbox" name="personal-info" id="Basketball"> Do you like Basketball?</input>
       </label>
@@ -280,11 +282,12 @@
         <input type="checkbox" name="personal-info" id="Race"> Are you multi-ethnic?</input>
       </label>
 
-      <!-- we can use the checked attributes for checkboxes or radio buttons to be checked BY DEFAULT -->
+      <!-- we can use the checked attributes for checkboxes or radio buttons to be CHECKED BY DEFAULT -->
       <label for="gender">
         <input type="checkbox" name="personal-info" value="male" id="gender" checked> Male</label>
       </label>
-    </p>
+    </div>
+    
   
 
 
