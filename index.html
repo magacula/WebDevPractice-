@@ -70,7 +70,11 @@
         border-color: black;
         border-width: 5px;
         border-style: solid;
-        border-radius: 10px;
+        border-radius: 5px;;
+      }
+
+      .silver-background {
+        background-color: silver;
       }
     </style>
   </head>
@@ -82,6 +86,7 @@
     -->
     <h1 style="font-size: 60px; font-weight: 600;">What's Poppin!</h1>
 
+    <main>
     <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph
         attributes provide additional information of a HTML element (always specified in the start tag)
         style attribute specifies the style of the text (color, font, size, etc)
@@ -96,11 +101,11 @@
                 - _top : opens linked doc in the full body of the same window / tab
       -->
 
-    <p>
-      This is a link to google:
-      <a href="https://www.google.com/" target="_self"> Click Here </a> and go
-      to Google
-    </p>
+      <p>
+        This is a link to google:
+        <a href="https://www.google.com/" target="_self"> Click Here </a> and go
+        to Google
+      </p>
 
     <!-- 
       Here, the href attribute takes a #(hash symbol) along w/ id of the element 
@@ -110,15 +115,15 @@
       -*** the #footer matches the id of the footer element bellow ***
       - if there is no text following the hash in the link is considered a DEAD LINK
     -->
-    <a href="#footer">Click to go to Bottom of Page</a>
+      <a href="#footer">Click to go to Bottom of Page</a>
 
-    <p>
-      This is a dead link:
-      <a href="#">Does Nothing</a>
-    </p>
+      <p>
+        This is a dead link:
+        <a href="#">Does Nothing</a>
+      </p>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
-    <main>
+
       <h2>Click on the image to view my LinkedIn!</h2>
 
       <!-- 
