@@ -1,3 +1,7 @@
+/** ORDERING MATTERS in a CSS style sheet when we need to override styles of elements
+    the LOWER the declaration, the higher the priority
+*/
+
 h1 {
   font-size: 60px;
   text-align: center;
@@ -7,6 +11,7 @@ h1 {
 }
 
 .title-des {
+  margin-top: 20px;
   font-size: 25px;
   text-align: center;
   color: rgb(80, 151, 184);
@@ -21,7 +26,11 @@ h2 {
   margin-top: 50px;
 }
 
-/** There are two diff. type of measurements: ABSOLUTE and RELATIVE 
+.underline-text {
+  text-decoration: underline;
+}
+
+/** There are two diff. type of length unit measurements: ABSOLUTE and RELATIVE 
     absolute: refers to the the absolute or exact physical measurements such px, mm, inches, etc.
     relative: refers to the size in relation to the font size
         em: is the size relative to font size of direct parent element
@@ -36,7 +45,13 @@ h3 {
   text-align: center;
 }
 
+h5 {
+  font-size: 20px;
+}
+
 table {
+  margin-top: -20px;
+  margin-bottom: 40px;
   border: 2px solid black;
   border-collapse: collapse;
   width: 50%;
@@ -48,7 +63,7 @@ th {
 
 th,
 td {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 10px;
   text-align: center;
 }
@@ -100,4 +115,9 @@ footer {
 
 form {
   margin: 20px;
+}
+
+/** the id attribute will always override elements that are associated to a class */
+#personal-des {
+  color: rgb(161, 66, 79);
 }

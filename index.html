@@ -75,7 +75,8 @@
 
   <!-- the body contains the visible part of the doc -->
   <body>
-    <!-- h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
+    <!-- 
+        h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
         font-size: is a CSS property of the style attribute that specifies the size of the font
 
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
@@ -122,7 +123,8 @@
       </p>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
-      <h2>Click on the image to view my LinkedIn!</h2>
+    <!-- We can use inline styles to override classes  -->
+      <h2 class="underline-text" style="color:tomato">Click on the image to view my LinkedIn!</h2>
 
       <!-- 
         This is an example of an image tag (images are self closing & don't need a closing tag)
@@ -148,6 +150,7 @@
       when moused over the element, the user can view the title as a tooltip
     -->
       <p 
+        id="personal-des"
         class="main-text silver-background"
         title="This is a tooltip for this paragraph element"
       >
@@ -214,7 +217,7 @@
           thead: tag to nest headers
           tbody: tag to nest the rows
     -->
-    <h5>Family Member Names and Age</h5>
+    <h5 class="underline-text">Family Member Names and Age</h5>
     <table>
       <thead>
         <tr>
