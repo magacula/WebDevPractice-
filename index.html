@@ -44,12 +44,6 @@
     STYLES ON VARIOUS WEB PAGES, BUT THIS IS USED FOR PRACTICE PURPOSES ***
       -->
     <style>
-      h2 {
-        font-size 40px;
-        text-align: center;
-        color: rgb(80, 151, 184);
-        font-family: "Grenze Gotisch", cursive;
-      }
 
       div {
         font-family: Arial, sans-serif;
@@ -73,6 +67,7 @@
 
       #lists {
         background-color: rgb(226, 223, 218);
+        padding: 10px 0px 10px 10px;
       }
 
     </style>
@@ -85,8 +80,10 @@
 
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
     -->
-    <h1>What's Poppin!</h1>
-    <h2>This page will be used for strictly practice purposes</h2>
+ 
+      <h1>What's Poppin!</h1>
+      <h2 class="title-des">This page will be used for strictly practice purposes</h2>
+    
 
     <main>
     <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph
@@ -125,8 +122,7 @@
       </p>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
-
-      <h2 style="text-align: left; font-size: 30px;color:salmon;">Click on the image to view my LinkedIn!</h2>
+      <h2>Click on the image to view my LinkedIn!</h2>
 
       <!-- 
         This is an example of an image tag (images are self closing & don't need a closing tag)
@@ -138,7 +134,7 @@
           - a trick is to use a percentage to make the image responsive when used w/ different window sizes 
             ex) 50% of the width of the web page
         -->
-      <a href="https://www.linkedin.com/in/makoigacula/">
+      <a href="https://www.linkedin.com/in/makoigacula/" target="_blank">
         <img
           src="assests/self.jpg"
           alt="self portrait"
@@ -202,14 +198,13 @@
               retrieving it from the server
         ex) <form action="/the-url-to-send-data-to"> </form>
     -->
-    <form action="" style="margin: 20px;">
+    <form action="">
       <!-- input tag allows us to get input from the user and to create a textfield -->
       <!-- using the type password type tells the browser to hide our password and not display the screen while typing -->
       <input type="text" placeholder="Enter username" name="username" required />
       <input type="password" placeholder="Enter password" name="password" required>
       <!-- button tag allows us to do something with info added in the textfield -->
       <button type="submit">Submit!</button>
-
     </form>
 
     <!-- table tag
@@ -220,10 +215,7 @@
           tbody: tag to nest the rows
     -->
     <h5>Family Member Names and Age</h5>
-    <table
-      border="2px solid black"
-      style="border-collapse: collapse; width: 50%;"
-    >
+    <table>
       <thead>
         <tr>
           <th>First</th>
@@ -297,7 +289,7 @@
       <label for="basketball">
         <input type="checkbox" name="personal-info" id="basketball"> Do you like Basketball?</input>
       </label>
-      <label for="qge">
+      <label for="age">
         <input type="checkbox" name="personal-info" id="age"> Are you over 21 years old?</input>
       </label>
       <label for="race">
@@ -322,8 +314,14 @@
 
 
 
+
+
+
+
+
+
     <!-- footers are used to outlines the author, copyright, contact info, etc. of webpage -->
-    <footer style="text-align: center;" id="footer">
+    <footer id="footer">
       CopyRight © Makoi Gacula
     </footer>
   </body>

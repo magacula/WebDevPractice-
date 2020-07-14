@@ -6,11 +6,40 @@ h1 {
   margin-bottom: -40px;
 }
 
+.title-des {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(80, 151, 184);
+  font-family: "Grenze Gotisch", cursive;
+}
+
+h2 {
+  text-align: left;
+  font-size: 23px;
+  color: salmon;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+/** There are two diff. type of measurements: ABSOLUTE and RELATIVE 
+    absolute: refers to the the absolute or exact physical measurements such px, mm, inches, etc.
+    relative: refers to the size in relation to the font size
+        em: is the size relative to font size of direct parent element
+        rem: is the size relative to the font size of the html root (scale to browser font settings)
+    
+    ** Use rem units unless you're sure you need em units, including on font sizes. **
+*/
 h3 {
   background-color: lightgrey;
   margin: 15px;
-  padding: 25px;
+  padding: 1.5em;
   text-align: center;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 50%;
 }
 
 th {
@@ -19,8 +48,13 @@ th {
 
 th,
 td {
+  border: 2px solid black;
   padding: 10px;
   text-align: center;
+}
+
+label {
+  padding-right: 20px;
 }
 
 .profile-image {
@@ -39,8 +73,15 @@ td {
 }
 
 .blue-border {
+  margin-top: 20px;
   background-color: rgb(108, 197, 209);
   padding: 1px;
+}
+
+.main-text {
+  margin-top: 2.5px;
+  margin-bottom: 60px;
+  padding: 25px;
 }
 
 /** This is using attribute selectors to style elements with the same attribute type */
@@ -51,4 +92,12 @@ td {
 /** Here we use clockwise notation to specify the margin of the checkboxes (top, right, bottom, left) */
 [type="checkbox"] {
   margin: 0px 5px 40px 0px;
+}
+
+footer {
+  text-align: center;
+}
+
+form {
+  margin: 20px;
 }
