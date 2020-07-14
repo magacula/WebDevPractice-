@@ -61,6 +61,16 @@
       .name {
         font-weight: bold;
       }
+
+      .profile-image {
+        width: 50%;
+      }
+
+      .thick-black-border {
+        border-color: black;
+        border-width: 5px;
+        border-style: solid;
+      }
     </style>
   </head>
 
@@ -117,15 +127,15 @@
         - alt : stands for alternate text. This is an additional attribute to retrieve the 
               text description of the image if the image does not load or display properly 
       - width / height: specify the image size to a fixed amount (pixels)
-          - a trick is to use a percentage to make image responsive to different window sizes 
+          - a trick is to use a percentage to make the image responsive when used w/ different window sizes 
             ex) 50% of the width of the web page
         -->
       <a href="https://www.linkedin.com/in/makoigacula/">
         <img
           src="assests/self.jpg"
           alt="self portrait"
-          width="50%"
           title="https://www.linkedin.com/in/makoigacula/"
+          class="profile-image thick-black-border"
         />
       </a>
 
