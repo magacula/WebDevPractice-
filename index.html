@@ -21,12 +21,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koi's First Webpage!</title>
-    <!-- link tag allows us to link another file (style.css which is a stylesheet document) -->
+    <!-- link tag allows us to use the href attribute to link another file (style.css which is a stylesheet document) -->
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;900&display=swap">
 
-    <!-- ** HERE we are using CSS selectors in the style tag ***
-        allows us to specify styles of certain html elements on our web page by including this style tag in the header -->
+
     <!-- 
       font-family: lists fonts we want. 1st font is our chosen font we want to be displayed
       All fonts that follow are the "back up" fonts just in case the browser can't display the first font specified
@@ -36,10 +35,20 @@
       "." stands for class
       *****
     -->
+    <!-- ** 
+      HERE we are using CSS selectors in the style tag ***
+      allows us to specify styles of certain html elements on our web 
+      page by including this style tag in the header 
+      
+*** NORMALLY WE WANT TO CREATE A SEPARATE DOC FOR STYLING OUR CSS SO WE CAN PERFORM THE SAME 
+    STYLES ON VARIOUS WEB PAGES, BUT THIS IS USED FOR PRACTICE PURPOSES ***
+      -->
     <style>
       h2 {
-        text-align: left;
-        color: darkred;
+        font-size 40px;
+        text-align: center;
+        color: rgb(80, 151, 184);
+        font-family: "Grenze Gotisch", cursive;
       }
 
       div {
@@ -62,20 +71,10 @@
         font-weight: bold;
       }
 
-      .profile-image {
-        width: 50%;
+      #lists {
+        background-color: rgb(226, 223, 218);
       }
 
-      .thick-black-border {
-        border-color: black;
-        border-width: 5px;
-        border-style: solid;
-        border-radius: 5px;;
-      }
-
-      .silver-background {
-        background-color: silver;
-      }
     </style>
   </head>
 
@@ -83,8 +82,11 @@
   <body>
     <!-- h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
         font-size: is a CSS property of the style attribute that specifies the size of the font
+
+        ***HERE is an example of inline styling... not normally used but is one way we can style elements***
     -->
-    <h1 style="font-size: 60px; font-weight: 600;">What's Poppin!</h1>
+    <h1>What's Poppin!</h1>
+    <h2>This page will be used for strictly practice purposes</h2>
 
     <main>
     <!-- p element represents a paragraph, with an attribute of "class" which defines the name of the paragraph
@@ -124,7 +126,7 @@
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
 
-      <h2>Click on the image to view my LinkedIn!</h2>
+      <h3>Click on the image to view my LinkedIn!</h3>
 
       <!-- 
         This is an example of an image tag (images are self closing & don't need a closing tag)
@@ -149,8 +151,8 @@
       title of an html element provides additional information about the element
       when moused over the element, the user can view the title as a tooltip
     -->
-      <p
-        class="main-content"
+      <p 
+        class="main-text silver-background"
         title="This is a tooltip for this paragraph element"
       >
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat esse
@@ -163,29 +165,32 @@
       </p>
     </main>
     <!-- This is an ex. of ordered / unordered lists -->
-    <p>Unordered Lists</p>
-    <ul>
-      <li>Makoi</li>
-      <li>Gion</li>
-      <li>Gacula</li>
-    </ul>
-    <p>Ordered Lists</p>
-    <ol>
-      <li>First</li>
-      <li>Second</li>
-      <li>Third</li>
-    </ol>
+    <div id="lists">
+      <p>Unordered Lists</p>
+        <ul>
+          <li>Makoi</li>
+          <li>Gion</li>
+          <li>Gacula</li>
+        </ul>
+      <p>Ordered Lists</p>
+        <ol>
+          <li>First</li>
+          <li>Second</li>
+          <li>Third</li>
+        </ol>
+    </div>
+    
 
     <!-- div just refers to division of our code, a certain section we may want nest elements in 
-      - the div in this case would be the gray border 
-      - margin: is the space of outside of an element between the edge of the webpage
+      - the div in this case would be the gray box and what ever is inside of it
+      - margin: is the space of outside of an element, between the element's border and its surrounding elements
       - padding: space on the inside of an element between the content and that element's border
     -->
 
-    <div>
-      <h2 style="background-color: lightgrey; margin: 50px; padding: 20px;">
-        This is a test header
-      </h2>
+    <div style="background-color: rgb(108, 197, 209); padding: 1px;">
+      <h3 style="background-color: lightgrey; margin: 15px; padding: 25px; text-align: center;">
+        Hi, I'm Makoi !
+      </h3>
     </div>
 
     <!-- This is a form that a user can fill out to submit data to the server 
@@ -288,14 +293,14 @@
 
     <!-- Checkboxes are another type of input, but users are allowed to choose MORE THAN 1 answer -->
     <div>
-      <label for="Basketball">
-        <input type="checkbox" name="personal-info" id="Basketball"> Do you like Basketball?</input>
+      <label for="basketball">
+        <input type="checkbox" name="personal-info" id="basketball"> Do you like Basketball?</input>
       </label>
-      <label for="Age">
-        <input type="checkbox" name="personal-info" id="Age"> Are you over 21 years old?</input>
+      <label for="qge">
+        <input type="checkbox" name="personal-info" id="age"> Are you over 21 years old?</input>
       </label>
-      <label for="Race">
-        <input type="checkbox" name="personal-info" id="Race"> Are you multi-ethnic?</input>
+      <label for="race">
+        <input type="checkbox" name="personal-info" id="race"> Are you multi-ethnic?</input>
       </label>
 
       <!-- we can use the checked attributes for checkboxes or radio buttons to be CHECKED BY DEFAULT -->
