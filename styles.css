@@ -6,6 +6,13 @@ h1 {
   margin-bottom: -40px;
 }
 
+h3 {
+  background-color: lightgrey;
+  margin: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
 th {
   background-color: rgb(145, 182, 194);
 }
@@ -16,10 +23,8 @@ td {
   text-align: center;
 }
 
-/** Here we use clockwise notation to specify the padding of this image (top, left, bottom, right) */
 .profile-image {
   width: 50%;
-  padding: 10px 10px 10px 10px;
 }
 
 .thick-black-border {
@@ -31,4 +36,19 @@ td {
 
 .silver-background {
   background-color: silver;
+}
+
+.blue-border {
+  background-color: rgb(108, 197, 209);
+  padding: 1px;
+}
+
+/** This is using attribute selectors to style elements with the same attribute type */
+[type="radio"] {
+  margin-bottom: 20px;
+}
+
+/** Here we use clockwise notation to specify the margin of the checkboxes (top, right, bottom, left) */
+[type="checkbox"] {
+  margin: 0px 5px 40px 0px;
 }

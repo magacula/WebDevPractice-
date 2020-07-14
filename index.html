@@ -126,7 +126,7 @@
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
 
-      <h3>Click on the image to view my LinkedIn!</h3>
+      <h2 style="text-align: left; font-size: 30px;color:salmon;">Click on the image to view my LinkedIn!</h2>
 
       <!-- 
         This is an example of an image tag (images are self closing & don't need a closing tag)
@@ -187,8 +187,8 @@
       - padding: space on the inside of an element between the content and that element's border
     -->
 
-    <div style="background-color: rgb(108, 197, 209); padding: 1px;">
-      <h3 style="background-color: lightgrey; margin: 15px; padding: 25px; text-align: center;">
+    <div class="blue-border">
+      <h3>
         Hi, I'm Makoi !
       </h3>
     </div>
@@ -219,7 +219,7 @@
           thead: tag to nest headers
           tbody: tag to nest the rows
     -->
-    <h3 style="background-color: linen;">Family Member Names and Age</h3>
+    <h5>Family Member Names and Age</h5>
     <table
       border="2px solid black"
       style="border-collapse: collapse; width: 50%;"
@@ -280,19 +280,20 @@
     -->
     <h4>What is your favorite Sport?</h4>
     <label for="basketball">
-      <input type="radio" name="fav-sport" value="basketball" id="basketball">Basketball </input>
+      <input type="radio" name="fav-sport" value="basketball" id="basketball"> Basketball</input>
     </label>
 
     <label for="football">
-      <input type="radio" name="fav-sport" value="football" id="football">Football </input>
+      <input type="radio" name="fav-sport" value="football" id="football"> Football</input>
     </label>
 
     <label for="soccer">
-      <input type="radio" name="fav-sport" value="soccer" id="soccer">Soccer </input>
+      <input type="radio" name="fav-sport" value="soccer" id="soccer"> Soccer</input>
     </label>
 
     <!-- Checkboxes are another type of input, but users are allowed to choose MORE THAN 1 answer -->
     <div>
+      <h4> Please select all that apply: </h4>
       <label for="basketball">
         <input type="checkbox" name="personal-info" id="basketball"> Do you like Basketball?</input>
       </label>
