@@ -123,7 +123,7 @@ label {
   margin: 0px 5px 40px 0px;
 }
 
-/** We can style elements with a particular attribute value  */
+/** We can style elements with a particular element w/ a particular attribute value  */
 footer[id="footer"] {
   color: gray;
 }
