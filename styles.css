@@ -14,6 +14,10 @@ Declare custom properties (CSS variables) in the root psuedo-class to be used th
   --title-des-color: rgb(80, 151, 184);
 }
 
+body {
+  background-color: rgb(228, 213, 213);
+}
+
 /** Used !important key word to override all other styles (in this case colors) of any h1 element */
 h1 {
   font-size: 60px;
@@ -29,18 +33,6 @@ h2 {
   color: salmon;
   margin-bottom: 5px;
   margin-top: 50px;
-}
-
-.underline-text {
-  text-decoration: underline;
-}
-
-.title-des {
-  margin-top: 20px;
-  font-size: 25px;
-  text-align: center;
-  color: rgb(80, 151, 184);
-  font-family: "Grenze Gotisch", cursive;
 }
 
 /** There are two diff. type of length unit measurements: ABSOLUTE and RELATIVE 
@@ -87,6 +79,18 @@ label {
   padding-right: 20px;
 }
 
+.underline-text {
+  text-decoration: underline;
+}
+
+.title-des {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(80, 151, 184);
+  font-family: "Grenze Gotisch", cursive;
+}
+
 /** This is an example of a Class Selector */
 .profile-image {
   width: 50%;
@@ -99,20 +103,20 @@ label {
   border-radius: 5px;
 }
 
-.silver-background {
-  background-color: silver;
-}
-
 .blue-border {
   margin-top: 20px;
   background-color: rgb(108, 197, 209);
   padding: 1px;
 }
 
-.main-text {
+.block-text {
   margin-top: 2.5px;
   margin-bottom: 60px;
   padding: 25px;
+}
+
+.silver-background {
+  background-color: silver;
 }
 
 /** Here we use Attribute Selectors to style elements with the same attribute values */
@@ -146,10 +150,6 @@ form {
 /** We use a selector on a psuedo-class on our button, so when we hover over we can change the color of the button */
 button:hover {
   background-color: orange;
-}
-
-body {
-  background-color: rgb(228, 213, 213);
 }
 
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
