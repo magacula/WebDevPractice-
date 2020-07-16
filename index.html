@@ -15,7 +15,7 @@
       the starting html tag signifies the start of the document
   -->
   <!-- the head is the "root element" that includes meta data about the html doc 
-    (title of web page, author, size of doc etc) --- title, link, meta, style...
+    (title of web page, author, size of doc etc) title, link, meta, style...
   -->
   <head>
     <meta charset="UTF-8" />
@@ -79,14 +79,16 @@
 
   <!-- the body contains the visible part of the doc 
       There are two diff. ways we can choose to display elements in BLOCK or INLINE boxes
+      **These are OUTER display types***
   -->
   <body>
     <!-- 
         h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
         font-size: is a CSS property of the style attribute that specifies the size of the font
 
-        -heading elements are an example of BLOCK boxes and have fixed height and width. When these elements grow or shrink
-        they affect the position of other elements due to padding, margin and border.
+        -heading elements are an example of BLOCK boxes and have fixed height and width & 
+        expand upon a line as the screen gets wider. When these elements grow or shrink they affect the 
+        position of other elements due to padding, margin and border.
 
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
     -->
@@ -130,6 +132,8 @@
         This is a dead link:
         <a href="#">Does Nothing</a>
       </p>
+
+      <div> <a href="#fam-table">View table</a>  </div>
 
     <!-- The main tag is used to help search engines and developers find the main contents of your webpage -->
     <!-- We can use inline styles to override classes 
@@ -220,7 +224,7 @@
     <form action="">
       <!-- input tag allows us to get input from the user and to create a textfield -->
       <!-- using the type password type tells the browser to hide our password and not display the screen while typing -->
-      <input type="text" placeholder="Enter username" name="username" required />
+      <input type="text" placeholder="Enter username" name="username" required >
       <input type="password" placeholder="Enter password" name="password" required>
       <!-- button tag allows us to do something with info added in the textfield -->
       <button type="submit">Submit!</button>
@@ -233,7 +237,7 @@
           thead: tag to nest headers
           tbody: tag to nest the rows
     -->
-    <h5 class="underline-text">Family Member Names and Age</h5>
+    <h5 id="fam-table"class="underline-text">Family Member Names and Age</h5>
     <table>
       <thead>
         <tr>
