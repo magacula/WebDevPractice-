@@ -5,7 +5,7 @@
 */
 
 /** 
-Declare custom variables in the root psuedo-class to be used throughout the whole HTML document 
+Declare custom properties (CSS variables) in the root psuedo-class to be used throughout the whole HTML document 
     - We use CSS variables when we want to change multiple elements at once by changing only 1 value
     (Here, I am defining a CSS variable "title-des-color" to store the color of the description, so
     that I can use this color in other elements using the var() function to insert the value of a custom CSS property)
@@ -58,6 +58,7 @@ h3 {
   text-align: center;
 }
 
+/** This is an example of a Type Selector */
 h5 {
   font-size: 20px;
   color: var(--title-des-color);
@@ -86,6 +87,7 @@ label {
   padding-right: 20px;
 }
 
+/** This is an example of a Class Selector */
 .profile-image {
   width: 50%;
 }
@@ -113,7 +115,7 @@ label {
   padding: 25px;
 }
 
-/** Here we use attribute selectors to style elements with the same attribute values */
+/** Here we use Attribute Selectors to style elements with the same attribute values */
 [type="radio"] {
   margin-bottom: 20px;
 }
@@ -123,7 +125,7 @@ label {
   margin: 0px 5px 40px 0px;
 }
 
-/** We can style elements with a particular element w/ a particular attribute value  */
+/** Using an Attribute Selector on a particular element, we can style elements with a particular element w/ a particular attribute value  */
 footer[id="footer"] {
   color: gray;
 }
@@ -136,7 +138,7 @@ form {
   margin: 20px;
 }
 
-/** the id attribute will always override elements that are associated to a class */
+/** Example of a ID Selector the id attribute will always override elements that are associated to a class */
 #personal-des {
   color: rgb(161, 66, 79);
 }
@@ -145,13 +147,15 @@ form {
 button:hover {
   background-color: orange;
 }
+
 body {
   background-color: rgb(228, 213, 213);
 }
 
-/** Media queries allow us to modify our web page on different device screen sizes 
+/** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
     min-width: Mobile first
     max-width: Desktop first
+    (This is one way how we can make our website responsive) **Make sure to put at the bottom of stylesheet*
 */
 @media (max-width: 600px) {
   body {
