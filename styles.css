@@ -113,7 +113,7 @@ label {
   padding: 25px;
 }
 
-/** This is using attribute selectors to style elements with the same attribute type */
+/** Here we use attribute selectors to style elements with the same attribute values */
 [type="radio"] {
   margin-bottom: 20px;
 }
@@ -144,4 +144,17 @@ form {
 /** We use a selector on a psuedo-class on our button, so when we hover over we can change the color of the button */
 button:hover {
   background-color: orange;
+}
+body {
+  background-color: rgb(228, 213, 213);
+}
+
+/** Media queries allow us to modify our web page on different device screen sizes 
+    min-width: Mobile first
+    max-width: Desktop first
+*/
+@media (max-width: 600px) {
+  body {
+    background-color: rgb(168, 165, 165);
+  }
 }
