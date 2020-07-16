@@ -19,6 +19,10 @@
   -->
   <head>
     <meta charset="UTF-8" />
+
+    <!-- This meta data tag allows us to change the viewport of various devices width's 
+        viewport - the entire screen of what the user sees
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koi's First Webpage!</title>
     <!-- link tag allows us to use the href attribute to link another file (style.css which is a stylesheet document) -->
@@ -78,6 +82,9 @@
     <!-- 
         h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
         font-size: is a CSS property of the style attribute that specifies the size of the font
+
+        -heading elements are an example of BLOCK elements and have fixed height and width. When these elements grow or shrink
+        they affect the position of other elements due to padding, margin and border.
 
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
     -->
@@ -262,6 +269,9 @@
       Then we use the span tag which is always a nested element. Within this span we 
       can declare a class, where we can manipulate certain parts of the text in various
       elements with the same class name
+
+      -a span element is an example of a INLINE element where its outside display has no height or width
+      ex) <a>, <span>
     -->
     <div id="top">This is the <span class="name"> top </span> div</div>
     <div id="middle">This is the <span class="name"> middle </span> div</div>
