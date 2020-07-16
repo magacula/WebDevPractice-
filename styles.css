@@ -1,8 +1,12 @@
 /** ORDERING MATTERS in a CSS style sheet when we need to override styles of elements
     the LOWER the declaration, the higher the priority
+
+    On this page we define various CSS Selectors to style our elements
 */
 
-/** Declare custom variables in the root psuedo-class to be used throughout the whole HTML document 
+/** 
+Declare custom variables in the root psuedo-class to be used throughout the whole HTML document 
+    - We use CSS variables when we want to change multiple elements at once by changing only 1 value
     (Here, I am defining a CSS variable "title-des-color" to store the color of the description, so
     that I can use this color in other elements using the var() function to insert the value of a custom CSS property)
 */
@@ -117,6 +121,11 @@ label {
 /** Here we use clockwise notation to specify the margin of the checkboxes (top, right, bottom, left) */
 [type="checkbox"] {
   margin: 0px 5px 40px 0px;
+}
+
+/** We can style elements with a particular attribute value  */
+footer[id="footer"] {
+  color: gray;
 }
 
 footer {
