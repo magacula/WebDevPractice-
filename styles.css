@@ -140,3 +140,8 @@ form {
 #personal-des {
   color: rgb(161, 66, 79);
 }
+
+/** We use a selector on a psuedo-class on our button, so when we hover over we can change the color of the button */
+button:hover {
+  background-color: orange;
+}
