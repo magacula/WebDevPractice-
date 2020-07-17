@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Types</title>
+
+    <style>
+      /** Here, we use multiple element selector to style both paragraph & unordered list elements */
+      p,
+      ul {
+        border: 2px solid green;
+        padding: 1em;
+      }
+
+      .block,
+      li {
+        border: 2px solid blue;
+        padding: 0.5em;
+      }
+
+      /** Here, we use inner display type: flex 
+        -list-stlye: none gets rid of the bullet points
+      */
+      ul {
+        display: flex;
+        list-style: none;
+      }
+
+      /** We use an outer display of block box on the span element */
+      .block {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <!-- A span element is an example of an element that has a inline box outer display 
+        inline elements DO NOT force line breaks
+    -->
+    <p>
+      I am another paragraph. Some of the <span class="block">words</span> have
+      been wrapped in a <span>span element</span>.
+    </p>
+
+
+</html>
