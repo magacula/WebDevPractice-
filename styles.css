@@ -84,34 +84,11 @@ ol > ul > li {
   color: blue;
 }
 
-/** Use of descendants selector on a unordered list to style ALL children of a parent element 
+/** Use of descendants selector on a unordered list to style ALL CHILDREN of a parent element 
 (All list elements of the unordered list get styled with the color turquoise)
 */
 ul li {
   color: turquoise;
-}
-
-/** Here, we use multiple element selector to style both paragraph & unordered list elements */
-p,
-ul {
-  border: 2px solid green;
-  padding: 0.5em;
-}
-
-.block,
-li {
-  border: 2px solid blue;
-  padding: 0.5em;
-}
-
-/** Here, we use inner display type: flex */
-ul {
-  display: flex;
-  list-style: none;
-}
-
-.block {
-  display: block;
 }
 
 .underline-text {
