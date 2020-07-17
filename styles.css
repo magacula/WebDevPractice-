@@ -31,7 +31,7 @@ h2 {
   text-align: left;
   font-size: 23px;
   color: salmon;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   margin-top: 50px;
 }
 
@@ -131,6 +131,28 @@ ul li {
   background-color: silver;
 }
 
+/** Practiced the basics of the Box Model (content, padding, border, margin)  
+    -**B/c of the Box Model, elements that are next together their margins collapse together --> share a margin
+        and who ever margin is bigger, that is the margin that is used
+    Ex) box-one's margin-bottom is used since 60 > 20 
+    (There is 60px between box-one & box-two) 
+*/
+.box-one {
+  background-color: lightblue;
+  padding: 20px;
+  border: 30px solid black;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 60px;
+}
+
+.box-two {
+  background-color: red;
+  padding: 20px;
+  border: 2px dotted yellow;
+  margin-top: 20px;
+}
+
 /** Here we use Attribute Selectors to style elements with the same attribute values */
 [type="radio"] {
   margin-bottom: 20px;
@@ -141,7 +163,7 @@ ul li {
   margin: 0px 5px 40px 0px;
 }
 
-/** Using an Attribute Selector on a particular element, we can style elements with a particular element w/ a particular attribute value  */
+/** Unlike we did above, we are now using an Attribute Selector on a particular element, we can style elements with a particular element w/ a particular attribute value */
 footer[id="footer"] {
   color: gray;
 }
