@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Display Type examples</title>
+
+    <style>
+      p,
+      ul {
+        border: 4px solid rebeccapurple;
+      }
+
+      span,
+      li {
+        border: 2px solid blue;
+      }
+
+      /** We use inner display inline-flex to make list elements to position horizontal from one another
+        but ALLOWS a
+      */
+      ul {
+        display: inline-flex;
+        list-style: none;
+        padding: 0px;
+      }
+
+      .inline {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- For the span elements, the display type is inline by default
+        However, for other elements such as headers and paragraph elements, the default
+        outer display is block 
+    -->
+    <p>
+      I am a paragraph. Some of the
+      <span>words</span> have been wrapped in a <span>span element</span>.
+    </p>
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <p class="inline">I am a paragraph. A short one.</p>
+    <p class="inline">I am another paragraph. Also a short one.</p>
+  </body>
+</html>
