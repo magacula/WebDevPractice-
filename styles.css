@@ -91,6 +91,29 @@ ul li {
   color: turquoise;
 }
 
+/** Here, we use multiple element selector to style both paragraph & unordered list elements */
+p,
+ul {
+  border: 2px solid green;
+  padding: 0.5em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: 0.5em;
+}
+
+/** Here, we use inner display type: flex */
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
+
 .underline-text {
   text-decoration: underline;
 }
@@ -151,6 +174,8 @@ ul li {
   padding: 20px;
   border: 2px dotted yellow;
   margin-top: 20px;
+  width: 300px;
+  height: 150px;
 }
 
 /** Here we use Attribute Selectors to style elements with the same attribute values */

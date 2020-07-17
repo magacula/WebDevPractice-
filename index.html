@@ -78,16 +78,15 @@
   </head>
 
   <!-- the body contains the visible part of the doc 
-      There are two diff. ways we can choose to display elements in BLOCK or INLINE boxes
-      **These are OUTER display types***
+      There are two diff. OUTER DISPLAY TYPES ways we can choose to display elements in BLOCK or INLINE boxes
   -->
   <body>
     <!-- 
-        h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6) 
+        h1 is an example of a heading, it is the largest or most important heading (Ex) h1-h6
         font-size: is a CSS property of the style attribute that specifies the size of the font
 
         -heading elements are an example of BLOCK boxes and have fixed height and width & 
-        expand upon a line as the screen gets wider. When these elements grow or shrink they affect the 
+        can break and continue on a new line. When these elements grow or shrink they affect the 
         position of other elements due to padding, margin and border.
 
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
@@ -348,15 +347,24 @@
 
     <h2 class="underline-text"> Here I'll try practing Box Model: </h2>
 
+    <!-- Box Model Practice -->
     <div class="box-one">
       ONE
     </div>
-
 
     <div class="box-two">
       TWO
     </div>
 
+    <h2 class="underline-text"> Playing with diff. display types: </h2>
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <p>I am another paragraph. Some of the <span class="block">words</span> have been wrapped in a <span>span element</span>.</p>
+    
 
 
 
