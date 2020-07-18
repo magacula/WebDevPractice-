@@ -73,14 +73,17 @@
         becomes smaller the width  of all the flex items combined  */
       #box1 {
         background-color: blue;
-        height: 200px;
+        height: 130px;
         flex-grow: 2;
+        align-self: flex-start;
       }
 
+      /* align-self allows us to align individual flex items in our flex container, unlike align-items that aligns all flex items */
       #box2 {
         background-color: red;
-        height: 300px;
+        height: 150px;
         flex-grow: 1;
+        align-self: flex-start;
       }
 
       /* Use media query to add mobile-friendly layout to make this page responsive */
