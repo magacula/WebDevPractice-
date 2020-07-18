@@ -12,10 +12,29 @@
 
     <style>
       .container-1 div,
-      .container-2 div {
+      .container-2 div,
+      .container-3 div {
         border: 0.05em solid black;
         padding: 10px;
       }
+      /* flex-wrap lets us control whether our flex items are all on one line or if they
+        can be on multiple lines */
+
+      .container-3 {
+        display: flex;
+
+        /* flex-wrap: wrap-reverse; */
+        flex-wrap: wrap;
+        /* 
+        justify-content: space-evenly;
+        justify-content: space-around; */
+        justify-content: space-between;
+      }
+
+      /* 
+        - wrap: wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.
+        - wrap-reverse: wraps items from right-to-left if they are in a row, or bottom-to-top if they are in a column 
+      */
 
       /* flex property allows us to size the items in the container by specifying how
         large we want an item by an integer value */
@@ -42,28 +61,47 @@
         flex-basis: 20%;
       }
 
+      .container-3-box {
+        flex-basis: 10%;
+      }
+
       /* Use media query to add mobile-friendly layout to make this page responsive */
       @media (min-width: 600px) {
-        /* align-items allows us to align the content of our items with the rest of the items in the container 
-        (makes sure all content int he container ends on the same line)
+        /* align-items allows us to align the content of our items with the rest of the items in
+            the flex container depending on the cross axis.
+            (modifys the size of the flex item to make sure all content text ends on the same line)
       */
 
         /* flex-direction allows us to position items in either rows or columns within the flexbox container */
         .container-1 {
           display: flex;
-          /* align-items: flex-start;
-        align-items: flex-end; */
+          /* 
+          align-items: flex-start;
+          align-items: flex-end;
+          align-items: center; */
 
           /* flex-direction: column; */
         }
 
         /* justify-content allows us to align our items various ways in our container */
+        /*  
+        - space-between: aligns items to the center of the main axis, with extra space 
+                        placed between the items. The first and last items are pushed to the very edge 
+                        of the flex container. 
+            Ex) in a row the first item is against the left side of the container, the last item is against the 
+                right side of the container, then the remaining space is distributed evenly among the other items.
+        - space-around: similar to space-between but the first and last items are not 
+                        locked to the edges of the container, the space is distributed around all the 
+                        items with a half space on either end of the flex container.
+        - space-evenly: Distributes space evenly between the flex items with a full space at either 
+                        end of the flex container
+      */
         .container-2 {
           display: flex;
 
           /* justify-content: flex-start;
         justify-content: flex-end;
-        justify-content: center; 
+        justify-content: center;
         justify-content: around; (had margin on the sides of start and end of flexbox*/
 
           justify-content: space-between;
@@ -79,7 +117,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
-      <div cclass="container-2-box">
+      <div class="container-2-box">
         <h3>Box 2</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -110,6 +148,63 @@
         <h3>Box 6</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-3">
+      <div class="container-3-box">
+        <h3>Box 7</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box 8</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box 9</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box 10</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box 11</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box 12</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+          facilis perspiciatis veniam eligendi alias quasi minima. Hic nostrum
+          voluptas, quos consequatur odit, facilis odio exercitationem quam qui
+          maxime voluptatem reiciendis?
         </p>
       </div>
     </div>
