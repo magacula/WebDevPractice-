@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- CSS Grid is anothe layout style that allows us to have rows and columns of elements in a Grid Format  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+
+    <style>
+      #grid {
+        display: grid;
+        padding: 20;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-columns: 200px 200px auto;
+        background-color: green;
+      }
+
+      .grid-item {
+        background-color: white;
+        border: 1px solid black;
+        margin: 10px;
+        height: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="grid">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+      <div class="grid-item">10</div>
+      <div class="grid-item">11</div>
+      <div class="grid-item">12</div>
+    </div>
+  </body>
+</html>
