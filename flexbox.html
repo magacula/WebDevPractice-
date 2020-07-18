@@ -25,15 +25,15 @@
 
         /* flex-wrap: wrap-reverse; */
         flex-wrap: wrap;
-        /* 
+        /*
         justify-content: space-evenly;
         justify-content: space-around; */
         justify-content: space-between;
       }
 
-      /* 
+      /*
         - wrap: wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.
-        - wrap-reverse: wraps items from right-to-left if they are in a row, or bottom-to-top if they are in a column 
+        - wrap-reverse: wraps items from right-to-left if they are in a row, or bottom-to-top if they are in a column
       */
 
       /* flex property allows us to size the items in the container by specifying how
@@ -65,6 +65,24 @@
         flex-basis: 10%;
       }
 
+      .container-4 {
+        display: flex;
+      }
+
+      /* Use flex-shrink OR flex-grow: to make items get bigger or smaller if the width of the flex container
+        becomes smaller the width  of all the flex items combined  */
+      #box1 {
+        background-color: blue;
+        height: 200px;
+        flex-grow: 2;
+      }
+
+      #box2 {
+        background-color: red;
+        height: 300px;
+        flex-grow: 1;
+      }
+
       /* Use media query to add mobile-friendly layout to make this page responsive */
       @media (min-width: 600px) {
         /* align-items allows us to align the content of our items with the rest of the items in
@@ -75,7 +93,7 @@
         /* flex-direction allows us to position items in either rows or columns within the flexbox container */
         .container-1 {
           display: flex;
-          /* 
+          /*
           align-items: flex-start;
           align-items: flex-end;
           align-items: center; */
@@ -84,16 +102,16 @@
         }
 
         /* justify-content allows us to align our items various ways in our container */
-        /*  
-        - space-between: aligns items to the center of the main axis, with extra space 
-                        placed between the items. The first and last items are pushed to the very edge 
-                        of the flex container. 
-            Ex) in a row the first item is against the left side of the container, the last item is against the 
+        /*
+        - space-between: aligns items to the center of the main axis, with extra space
+                        placed between the items. The first and last items are pushed to the very edge
+                        of the flex container.
+            Ex) in a row the first item is against the left side of the container, the last item is against the
                 right side of the container, then the remaining space is distributed evenly among the other items.
-        - space-around: similar to space-between but the first and last items are not 
-                        locked to the edges of the container, the space is distributed around all the 
+        - space-around: similar to space-between but the first and last items are not
+                        locked to the edges of the container, the space is distributed around all the
                         items with a half space on either end of the flex container.
-        - space-evenly: Distributes space evenly between the flex items with a full space at either 
+        - space-evenly: Distributes space evenly between the flex items with a full space at either
                         end of the flex container
       */
         .container-2 {
@@ -207,6 +225,11 @@
           maxime voluptatem reiciendis?
         </p>
       </div>
+    </div>
+
+    <div class="container-4">
+      <div id="box1"></div>
+      <div id="box2"></div>
     </div>
   </body>
 </html>
