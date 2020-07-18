@@ -11,8 +11,12 @@
     <title>Flex Box Practice</title>
 
     <style>
+      /** align-items allows us to align the content of our items with the rest of the items in the container 
+        (makes sure all content int he container ends on the same line)
+      */
       .container-1 {
         display: flex;
+        align-items: flex-start;
       }
 
       .container-1 div {
@@ -20,14 +24,14 @@
         padding: 10px;
       }
 
-      /** flex property allows us to size the items in the container by specifying how 
+      /** flex property allows us to size the items in the container by specifying how
         large we want an item by an integer value */
       .box-1 {
-        flex: 1;
+        flex: 2;
         order: 3;
       }
 
-      /** order property allows us to arrange items in a particular order without 
+      /** order property allows us to arrange items in a particular order without
       having to change any of the HTML source code */
       .box-2 {
         flex: 1;
