@@ -7,6 +7,11 @@
     <title>Grid</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       #grid {
         display: grid;
         padding: 20;
@@ -35,9 +40,10 @@
       }
 
       .grid-container {
-        margin-top: 50px;
-        padding: 10px;
         display: grid;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        padding: 10px;
         background-color: rgb(182, 180, 180);
 
         grid-gap: 10px;
@@ -65,7 +71,29 @@
 
         /* can do the same thing above with: */
         grid-column-start: 1; /* starts item at vertical line 1 of grid */
-        grid-column-end: 4; /* ends item at vertical line 4 of grid */
+        grid-column-end: 3; /* ends item at vertical line 3 of grid */
+      }
+
+      .wrapper {
+        display: grid;
+        width: 90%;
+        max-width: 100%;
+        height: 100%;
+
+        margin: 0 auto;
+        grid-column-gap: 150px;
+        grid-row-gap: 100px;
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 250px;
+      }
+
+      .my-grid-item {
+        align-content: center;
+      }
+
+      .pic {
+        height: 200px;
       }
     </style>
   </head>
@@ -99,6 +127,36 @@
       <div class="item">10</div>
       <div class="item">11</div>
       <div class="item">12</div>
+    </div>
+
+    <div class="wrapper">
+      <div class="my-grid-item">
+        <img class="pic" src="assests/1.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/2.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/3.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/4.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/5.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/6.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/7.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/8.jpg" alt="" />
+      </div>
+      <div class="my-grid-item">
+        <img class="pic" src="assests/9.jpg" alt="" />
+      </div>
     </div>
   </body>
 </html>
