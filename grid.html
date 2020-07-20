@@ -10,17 +10,48 @@
       #grid {
         display: grid;
         padding: 20;
-        grid-column-gap: 10px;
+
+        grid-column-gap: 2px;
         grid-row-gap: 10px;
-        grid-template-columns: 200px 200px auto;
+        /* grid-gap: 10px;   the gap between both rows and columns  */
+
         background-color: green;
+
+        /* grid-template-columns: repeat(3,100px);
+        grid-template-columns: 2fr 2fr 2fr; */
+        grid-template-columns: 100px 100px auto;
+
+        grid-template-rows: 50px;
+        grid-auto-rows: 100px;
+        /* grid-auto-rows: minmax(150px, auto); */
       }
 
       .grid-item {
         background-color: white;
         border: 1px solid black;
         margin: 10px;
-        height: 40px;
+
+        text-align: center;
+      }
+
+      .grid-container {
+        margin-top: 50px;
+        padding: 10px;
+        display: grid;
+        background-color: rgb(182, 180, 180);
+
+        grid-gap: 10px;
+
+        grid-template-columns: 1fr 1fr 1fr; /* fr means one FRACTION of the space in the container */
+        /* justify-content: space-evenly; */
+
+        grid-template-rows: 100px;
+        grid-auto-rows: 200px;
+      }
+
+      .item {
+        background-color: rgb(214, 34, 34);
+        border: 1px solid black;
         text-align: center;
       }
     </style>
@@ -40,6 +71,21 @@
       <div class="grid-item">10</div>
       <div class="grid-item">11</div>
       <div class="grid-item">12</div>
+    </div>
+
+    <div class="grid-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
     </div>
   </body>
 </html>
