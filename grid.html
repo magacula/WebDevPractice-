@@ -61,7 +61,11 @@
         border: 1px solid black;
         text-align: center;
         /* span allows us to specify the amount of columns we want an individual item to span within the grid */
-        grid-column: span 2;
+        /* grid-column: span 2; */
+
+        /* can do the same thing above with: */
+        grid-column-start: 1; /* starts item at vertical line 1 of grid */
+        grid-column-end: 4; /* ends item at vertical line 4 of grid */
       }
     </style>
   </head>
