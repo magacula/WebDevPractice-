@@ -130,7 +130,7 @@
         display: grid;
         margin-top: 200px;
         background: lightgray;
-        min-height: 500px;
+
         width: 100%;
 
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -147,24 +147,40 @@
       .header {
         grid-area: header;
         background-color: rgb(63, 148, 245);
-        font-size: 40px;
-        text-align: center;
       }
 
       .main-content {
         grid-area: main-content;
+        background-color: rgb(74, 179, 74);
+        width: 130%;
+      }
+
+      .side-bar {
+        grid-area: side-bar;
+        background-color: rgb(160, 59, 190);
+        width: 70%;
+        justify-self: end;
       }
 
       .twin-1 {
         grid-area: twin-1;
+        background-color: rgb(231, 159, 52);
       }
 
       .twin-2 {
         grid-area: twin-2;
+        background-color: rgb(231, 159, 52);
       }
 
       .footer {
         grid-area: footer;
+        background-color: rgb(63, 148, 245);
+      }
+
+      .text-format {
+        font-size: 30px;
+        text-align: center;
+        padding: 40px 0;
       }
     </style>
   </head>
@@ -232,12 +248,12 @@
 
     <!-- Area template example (using grid-template-areas) -->
     <div class="grid-temp-container">
-      <div class="header">header</div>
-      <div class="main-content"></div>
-      <div class="side-bar"></div>
-      <div class="twin-1"></div>
-      <div class="twin-2"></div>
-      <div class="footer"></div>
+      <div class="header text-format">header</div>
+      <div class="main-content text-format">main content</div>
+      <div class="side-bar text-format">side bar</div>
+      <div class="twin-1 text-format">twin 1</div>
+      <div class="twin-2 text-format">twin 2</div>
+      <div class="footer text-format">footer</div>
     </div>
   </body>
 </html>
