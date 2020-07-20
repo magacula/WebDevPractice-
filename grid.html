@@ -55,6 +55,8 @@
 
         grid-template-rows: 100px;
         grid-auto-rows: 200px;
+
+        /* align-items:   (aligns items vertically) */
       }
 
       .item {
@@ -122,6 +124,48 @@
       .pic {
         height: 100%;
       }
+
+      /* Grid Area class selectors */
+      .grid-temp-container {
+        display: grid;
+        margin-top: 200px;
+        background: lightgray;
+        min-height: 500px;
+        width: 100%;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        grid-template-areas:
+          "header header header header"
+          ". main-content side-bar ."
+          ". twin-1 twin-2 .."
+          "footer footer footer footer";
+      }
+
+      .header {
+        grid-area: header;
+        background-color: rgb(63, 148, 245);
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .main-content {
+        grid-area: main-content;
+      }
+
+      .twin-1 {
+        grid-area: twin-1;
+      }
+
+      .twin-2 {
+        grid-area: twin-2;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
     </style>
   </head>
 
@@ -184,6 +228,16 @@
       <div class="my-grid-item">
         <img class="pic" src="assests/9.jpg" alt="" />
       </div>
+    </div>
+
+    <!-- Area template example (using grid-template-areas) -->
+    <div class="grid-temp-container">
+      <div class="header">header</div>
+      <div class="main-content"></div>
+      <div class="side-bar"></div>
+      <div class="twin-1"></div>
+      <div class="twin-2"></div>
+      <div class="footer"></div>
     </div>
   </body>
 </html>
