@@ -33,6 +33,12 @@ h2 {
   color: salmon;
   margin-bottom: 20px;
   margin-top: 50px;
+  background-color: rgba(
+    45,
+    45,
+    45,
+    0.562
+  ); /* rgba uses rbg coloring includes alpha for opacity */
 }
 
 /** There are two diff. type of length unit measurements: ABSOLUTE and RELATIVE 
