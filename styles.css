@@ -12,7 +12,7 @@ Declare custom properties (CSS variables) in the root psuedo-class to be used th
 */
 :root {
   --title-des-color: rgb(80, 151, 184);
-  --primary-background-color: rgb(230, 230, 230);
+  --primary-background-color: hsl(264, 19%, 45%);
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 
 header {
   background-color: var(--primary-background-color);
+
   width: 100%;
   height: 100%;
 }
@@ -237,7 +238,7 @@ button:hover {
 
 #nav-bar {
   margin-top: -20px;
-  background-color: rgba(45, 45, 45, 0.6);
+  background-color: rgba(126, 122, 122, 0.781);
   width: 100%;
 }
 
@@ -253,6 +254,6 @@ button:hover {
 */
 @media (max-width: 600px) {
   body {
-    background-color: rgb(168, 165, 165);
+    background-color: rgb(163, 150, 150);
   }
 }
