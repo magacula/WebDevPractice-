@@ -233,6 +233,11 @@ button:hover {
   width: 100%;
 }
 
+/* Can use margin to center elements horizontally in the window of a browser setting margin to "auto" */
+#box-card-1 {
+  margin: auto;
+}
+
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
     min-width: Mobile first
     max-width: Desktop first
