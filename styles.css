@@ -97,6 +97,11 @@ ul li {
   color: turquoise;
 }
 
+p {
+  line-height: 2; /* makes paragraph text double space */
+  font-weight: 600; /* adds weight to text (boldness) */
+}
+
 .title-des {
   margin-top: 20px;
   font-size: 25px;
