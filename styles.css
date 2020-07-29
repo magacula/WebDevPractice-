@@ -12,10 +12,17 @@ Declare custom properties (CSS variables) in the root psuedo-class to be used th
 */
 :root {
   --title-des-color: rgb(80, 151, 184);
+  --primary-background-color: rgb(230, 230, 230);
 }
 
 body {
   background-color: rgb(228, 213, 213);
+}
+
+header {
+  background-color: var(--primary-background-color);
+  width: 100%;
+  height: 100%;
 }
 
 /** Used !important key word to override all other styles (in this case colors) of any h1 element */
@@ -179,6 +186,7 @@ footer[id="footer"] {
 
 footer {
   text-align: center;
+  background-color: var(--primary-background-color);
 }
 
 /* we can use absolute positions to "lock" an element within its parent 
@@ -228,7 +236,7 @@ button:hover {
 }
 
 #nav-bar {
-  margin-top: -10px;
+  margin-top: -20px;
   background-color: rgba(45, 45, 45, 0.6);
   width: 100%;
 }
