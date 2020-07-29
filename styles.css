@@ -181,8 +181,16 @@ footer {
   text-align: center;
 }
 
+/* relative positioning allows us to move elements within the "normal flow" 
+  of the page relative to its current position.
+  - we can specify how far we want an element moved away from other elements
+    by using (left, right, top, bottom) with px, em, rem
+*/
 form {
-  margin: 20px;
+  position: relative;
+  top: 20px;
+  bottom: 20px;
+  left: 50vh;
 }
 
 /** Example of a ID Selector the id attribute will always override elements that are associated to a class */
