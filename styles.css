@@ -181,16 +181,23 @@ footer {
   text-align: center;
 }
 
+/* we can use absolute positions to "lock" an element within its parent 
+  (Here, we lock the position of a form inside the section parent element (id=form-section)
+*/
+form {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  right: 500px;
+}
+
 /* relative positioning allows us to move elements within the "normal flow" 
   of the page relative to its current position.
   - we can specify how far we want an element moved away from other elements
     by using (left, right, top, bottom) with px, em, rem
 */
-form {
+#form-section {
   position: relative;
-  top: 20px;
-  bottom: 20px;
-  left: 50vh;
 }
 
 /** Example of a ID Selector the id attribute will always override elements that are associated to a class */
