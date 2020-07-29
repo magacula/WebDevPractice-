@@ -190,7 +190,9 @@ form {
   color: rgb(161, 66, 79);
 }
 
-/** We use a selector on a psuedo-class on our button, so when we hover over we can change the color of the button */
+/** We use a psuedo-class selector of the button tag
+    we can change the hover state by setting the background color to a diff color
+*/
 button:hover {
   background-color: orange;
 }
