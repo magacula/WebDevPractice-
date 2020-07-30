@@ -269,6 +269,14 @@ button:hover {
   transform: scale(1);
 }
 
+#profile-pic-icon > img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: ;
+}
+
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
     min-width: Mobile first
     max-width: Desktop first
