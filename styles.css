@@ -292,6 +292,9 @@ button:hover {
 
   animation-name: color-changer;
   animation-duration: 4s;
+
+  /* here, by specifying the animation-fill-mode to forwards, we are telling the animation to remain in its "finished state" or 100% keyframe after completion */
+  animation-fill-mode: forwards;
 }
 
 /* @keyframes ___________ (animation name) */
