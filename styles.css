@@ -247,6 +247,15 @@ button:hover {
   margin: auto;
 }
 
+/* linear-gradient(gradient-direction, color 1, color 2, etc) */
+#gradient-box {
+  border-radius: 20px;
+  width: 70%;
+  height: 400px;
+  margin: 50px auto;
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+}
+
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
     min-width: Mobile first
     max-width: Desktop first
