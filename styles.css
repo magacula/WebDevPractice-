@@ -283,6 +283,31 @@ button:hover {
   box-shadow: 20px 20px 50px #888888, 0px 7px 10px #888888;
 }
 
+/* class to perform aninmation on along with keyframe rule */
+.anim {
+  width: 50%;
+  height: 400px;
+  background-color: black;
+  margin: 100px auto;
+
+  animation-name: color-changer;
+  animation-duration: 4s;
+}
+
+/* @keyframes ___________ (animation name) */
+@keyframes color-changer {
+  0% {
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: yellow;
+  }
+}
+
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
     min-width: Mobile first
     max-width: Desktop first
