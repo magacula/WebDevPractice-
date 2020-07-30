@@ -285,29 +285,41 @@ button:hover {
 
 /* class to perform aninmation on along with keyframe rule */
 .anim {
-  width: 50%;
-  height: 400px;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
   background-color: black;
-  margin: 100px auto;
+  margin: 100px;
 
   animation-name: color-changer;
-  animation-duration: 4s;
+  animation-duration: 7s;
 
-  /* here, by specifying the animation-fill-mode to forwards, we are telling the animation to remain in its "finished state" or 100% keyframe after completion */
+  /* here, by specifying the animation-fill-mode to forwards, we are telling 
+    the animation to remain in its "finished state" or 100% keyframe after completion 
+    
+    (if we do not explicitly set the fill-mode the animation will reset to its original state
+  */
+
   animation-fill-mode: forwards;
 }
 
 /* @keyframes ___________ (animation name) */
 @keyframes color-changer {
   0% {
+    left: 0px; /* adds motion to animation */
   }
 
   50% {
     background-color: green;
+    left: 60%;
+    opacity: 0;
   }
 
   100% {
     background-color: yellow;
+    right: 60%;
   }
 }
 
