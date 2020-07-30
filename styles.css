@@ -247,13 +247,18 @@ button:hover {
   margin: auto;
 }
 
-/* linear-gradient(gradient-direction, color 1, color 2, etc) */
+/* linear-gradient(gradient-direction (angle value in degrees), color 1, color 2, etc) */
 #gradient-box {
   border-radius: 20px;
   width: 70%;
   height: 400px;
-  margin: 50px auto;
+  margin: 50px auto; /* (top-bottom, left-right) */
   background: linear-gradient(35deg, #ccffff, #ffcccc);
+
+  /* we can use the transform property in CSS to scale elements to diff sizes
+    ex) we'll size this colored div to 0.5 (half) times smaller than the size we originally specified)
+  */
+  transform: scale(0.5);
 }
 
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
