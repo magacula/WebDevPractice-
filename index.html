@@ -92,6 +92,9 @@
         ***HERE is an example of inline styling... not normally used but is one way we can style elements***
     -->
     
+    <!-- Header tag is another semantic html tag that allows assistive technologies 
+        to locate certain sections of our code
+    -->
     <header>
       <h1>Hi ! Welcome to my Page</h1>
       <h2 class="title-des" style="background-color: rgba(0,0,0,0);">This page will be used for strictly practice purposes</h2>
@@ -100,8 +103,8 @@
     <nav id="nav-bar">
       <ul>
         <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a> </li>
+        <li><a href="#greeting">About</a></li>
+        <li><a href="#footer">Contact</a> </li>
       </ul>
     </nav>
 
@@ -165,9 +168,10 @@
               (points to a specific point of the image's URL)
         - alt : stands for alternate text. This is an additional attribute to retrieve the 
               text description of the image if the image does not load or display properly 
-              - Include alt attribute in ALL img tags, but depending if the image is described through the text content, they can be set to an empty string. ex) alt=""
-              - INCLUDE alt text with images w/ captions to help the search engine locate the image**
-            ** Use for "decorative labels", like bg images **
+              - Include alt attribute in ALL img tags, but depending if the image is described 
+                through the text content, they can be set to an empty string. ex) alt=""
+              - alt text using images w/ captions helps the search engine locate the image (SEO)
+            ** Use for "decorative labels", like background images **
         - width / height: specify the image size to a fixed amount (pixels)
           - a trick is to use a percentage to make the image responsive when used w/ different window sizes 
             ex) 50% of the width of the web page
@@ -247,7 +251,7 @@
       - padding: space on the inside of an element between the content and that element's border
     -->
 
-    <div class="blue-border">
+    <div  id="greeting" class="blue-border">
       <h3>
         Hi, I'm Makoi !
       </h3>
@@ -411,6 +415,11 @@
 
     <div class="ball"> </div>
     
+    <!-- figure element (improving chart visiblity) -->
+    <figure>
+      <img src="./assests/5.jpg" style="width: 500px;" alt="">
+      <figcaption> This is an example of a caption under an img tag wrapped in a figure tag </figcaption>
+    </figure>
 
     <!-- footers are used to outlines the author, copyright, contact info, etc. of webpage -->
     <footer id="footer">
