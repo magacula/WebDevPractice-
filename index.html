@@ -417,7 +417,11 @@
     
     <!-- figure element (improving chart visiblity) -->
     <figure>
-      <img src="./assests/5.jpg" style="width: 500px;" alt="">
+      <!-- image is responsive since we gave it a fixed width but also made the 
+        max-width a 100% so that it never goes wider than its container 
+        height is auto so it keeps its orginal aspect ratio whenever it resizes on different viewports (screen sizes)
+      -->
+      <img src="./assests/5.jpg" style="width:800px; max-width: 100%; height: auto;" alt="Lady Under A Temple Building">
       <figcaption> This is an example of a caption under an img tag wrapped in a figure tag </figcaption>
     </figure>
 
