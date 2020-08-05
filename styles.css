@@ -193,12 +193,12 @@ footer {
 /* we can use absolute positions to "lock" an element within its parent 
   (Here, we lock the position of a form inside the section parent element (id=form-section)
 */
-form {
+/* form {
   position: absolute;
   top: 10px;
   left: 500px;
   right: 500px;
-}
+} */
 
 /* relative positioning allows us to move elements and remove them from the "normal flow" 
   of the page relative to its current position.
@@ -346,6 +346,34 @@ button:hover {
   100% {
     top: 200px;
   }
+}
+
+/* button to use for personal website */
+.button {
+  transition: background-color 0.2s ease-in-out box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  border: 1px solid;
+  color: black;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+a.button:hover {
+  /* border-bottom-color: transparent; */
+  color: #18bfef !important;
 }
 
 /** Media queries allow us to modify our web page by changing our CSS on different device screen sizes 
