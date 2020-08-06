@@ -247,7 +247,7 @@ button:hover {
   width: 400px;
   margin: 100px auto;
   border: 2px solid black;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16), 20px 6px 6px rgba(0, 0, 0, 0.23);
 }
 /* box-shadow: 
   - hor. offset: x-value  

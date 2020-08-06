@@ -12,8 +12,62 @@ body {
   text-align: center;
   color: #333;
   margin: 0;
+  background-color: rgba(238, 238, 238, 0.897);
+}
+
+main {
+  display: block;
+}
+h1 {
+  margin-bottom: 0;
+}
+h6 {
+  display: block;
+  margin: 0 0 50px 0;
 }
 
 p {
+  display: block;
   font-size: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+figure {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+#img-div {
+  background: white;
+  padding: 40px;
+  margin: 0;
+}
+
+#header-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.26), 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+figurecaption {
+  display: block;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  display: block;
+  font-size: 0.8em;
+  margin: 50px 0;
+  text-align: center;
+  font-weight: bold;
 }
