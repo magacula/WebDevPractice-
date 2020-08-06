@@ -1,9 +1,3 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Helvetica Neue", Arial, sans-serif;
@@ -18,21 +12,33 @@ body {
 main {
   display: block;
 }
+
 h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
+
+h3 {
+  font-size: 0.8em;
+  margin: 50px 0;
+  text-align: center;
+  font-weight: bold;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 h6 {
-  display: block;
   margin: 0 0 50px 0;
 }
 
 p {
-  display: block;
   font-size: 1rem;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 figure {
@@ -50,26 +56,18 @@ figure {
   margin: 0;
 }
 
-#header-img {
+#image {
   display: block;
   height: auto;
   max-width: 100%;
   margin: 0 auto;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.26), 6px 6px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.23), 6px 6px 6px rgba(0, 0, 0, 0.26);
 }
 
 figurecaption {
   display: block;
   font-size: 16px;
-  padding-bottom: 20px;
-}
-
-h3 {
-  display: block;
-  font-size: 0.8em;
-  margin: 50px 0;
-  text-align: center;
-  font-weight: bold;
+  margin: 20px auto;
 }
 
 ul {
