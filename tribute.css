@@ -71,3 +71,11 @@ h3 {
   text-align: center;
   font-weight: bold;
 }
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto; /* uses margin property to center list items in center of screen */
+  text-align: left;
+  line-height: 1.9;
+  font-size: 0.85em;
+}
