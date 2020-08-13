@@ -19,7 +19,7 @@
       :root {
         --color-white: #f3f3f3;
         --color-darkblue: #1b1b32;
-        --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+        --color-darkblue-alpha: rgba(27, 27, 50, 0.78);
         --color-green: #37af65;
       }
 
@@ -57,6 +57,27 @@
         background-position: center;
       }
 
+      .container {
+        width: 100%;
+        margin: 3.124rem auto 0 auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
       header {
         padding: 0 0.625rem;
         margin-bottom: 1.875rem;
@@ -64,14 +85,17 @@
 
       h1 {
         line-height: 1.2;
-        font-weight: 600;
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 1.125rem;
       }
 
       h1,
       p {
         margin-top: 0;
         margin-bottom: 0.5rem;
-        text-align: center;
       }
 
       #description {
@@ -79,23 +103,124 @@
         font-weight: 200;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
       }
+
+      /*** form ***/
+
+      form {
+        background: var(--color-darkblue-alpha);
+        padding: 2.5rem 0.625rem;
+        border-radius: 0.25rem;
+      }
+
+      .form-group {
+        margin: 0 auto 1.25rem auto;
+        padding: 0.5rem;
+      }
+
+      #opt {
+        margin-left: 0.25rem;
+        font-size: 0.9rem;
+        color: #e4e4e4;
+      }
+
+      /* Use flex-box on input labels to display them vertically */
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      button,
+      select,
+      textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      /* class used for input styling input tags */
+      .form-control {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      button {
+        border: none;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1 id="title">Makoi's Survey Form</h1>
-      <p id="description">
-        Thank you for taking the time to fill this form out !
-      </p>
-    </header>
+    <div class="container">
+      <header class="text-center">
+        <h1 id="title">Makoi's Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to fill this form out !
+        </p>
+      </header>
 
-    <form action="" id="survey-form">
-      <label for="name">Name</label>
-      <input type="text" name="name" placeholder="Enter your name" required />
-      <label for="email">Email</label>
-      <input type="text" name="email" placeholder="Enter your Email" required />
-      <label for="age">Age(optional)</label>
-      <input type="text" name="age" placeholder="Age" />
-    </form>
+      <!-- reminder: "name attribute" identifies an input that is sent to the server -->
+      <form action="" id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="age-label" for="age"
+            >Age <span id="opt">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="form-control"
+            min="1"
+            max="100"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>What is your current role ?</p>
+          <!-- select elements allows us to select from a set of options-->
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled="" selected="" value=""
+              >Select current role</option
+            >
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
