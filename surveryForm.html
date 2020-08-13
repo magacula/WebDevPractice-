@@ -3,16 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
     <title>Survery Form</title>
 
-    <style></style>
+    <style>
+      :root {
+        --color-white: #f3f3f3;
+        --color-darkblue: #1b1b32;
+        --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+        --color-green: #37af65;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+          Sans-Serif;
+        line-height: 1.5;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--color-white);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: var(--color-darkblue);
+        background-image: linear-gradient(
+            115deg,
+            rgba(79, 79, 190, 0.8),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url(./assests/9.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      header {
+        padding: 0 0.625rem;
+        margin-bottom: 1.875rem;
+      }
+
+      h1 {
+        line-height: 1.2;
+        font-weight: 600;
+      }
+
+      h1,
+      p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+
+      #description {
+        font-style: italic;
+        font-weight: 200;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1 id="title">Makoi's Survey Form</h1>
-      <h3 id="description">
+      <p id="description">
         Thank you for taking the time to fill this form out !
-      </h3>
+      </p>
     </header>
 
     <form action="" id="survey-form">
@@ -20,7 +93,7 @@
       <input type="text" name="name" placeholder="Enter your name" required />
       <label for="email">Email</label>
       <input type="text" name="email" placeholder="Enter your Email" required />
-      <label for="age">Age</label>
+      <label for="age">Age(optional)</label>
       <input type="text" name="age" placeholder="Age" />
     </form>
   </body>
