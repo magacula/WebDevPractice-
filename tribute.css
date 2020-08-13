@@ -14,7 +14,8 @@ main {
 }
 
 h1 {
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -22,7 +23,6 @@ h3 {
   margin: 50px 0;
   text-align: center;
   font-weight: bold;
-
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0px;
@@ -61,6 +61,7 @@ figure {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
+
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.23), 6px 6px 6px rgba(0, 0, 0, 0.26);
 }
 
@@ -75,5 +76,5 @@ ul {
   margin: 0 auto 50px auto; /* uses margin property to center list items in center of screen */
   text-align: left;
   line-height: 1.9;
-  font-size: 0.85em;
+  font-size: 0.79em;
 }
