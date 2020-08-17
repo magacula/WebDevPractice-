@@ -118,7 +118,7 @@
         padding: 0.5rem;
       }
 
-      #opt {
+      .opt {
         margin-left: 0.25rem;
         font-size: 0.9rem;
         color: #e4e4e4;
@@ -142,12 +142,7 @@
         line-height: inherit;
       }
 
-      label {
-        display: flex;
-        align-items: center;
-        font-size: 1.125rem;
-        margin-bottom: 0.5rem;
-      }
+    
 
       input[type="radio"],input[type="checkbox"] {
         display: inline-block;
@@ -173,6 +168,24 @@
 
       button {
         border: none;
+      }
+
+      #input-textarea {
+          max-height: 120px;
+          min-height: 30px;
+          width: 100%;
+          padding: 0.625rem;
+          resize: vertical;
+      }
+
+      #submit-button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        background: var(--color-green);
+        color: inherit;
+        border-radius: 2px;
+        cursor: pointer
       }
     </style>
   </head>
@@ -201,7 +214,7 @@
         <div class="form-group">
           <label id="email-label" for="email">Email</label>
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             class="form-control"
@@ -210,14 +223,14 @@
           />
         </div>
         <div class="form-group">
-          <label id="age-label" for="age"
-            >Age <span id="opt">(optional)</span></label
+          <label id="number-label" for="number"
+            >Age <span class="opt">(optional)</span></label
           >
           <input
             type="number"
             name="age"
             value="number"
-            id="age"
+            id="number"
             class="form-control"
             min="1"
             max="100"
@@ -251,6 +264,27 @@
             </label>
             <label for="no"> 
                 <input type="radio" id="no" name="happiness-level" value="no">No</input>
+        </div>
+        <div class="form-group">
+            <p>What music genres do you like? <span class="opt">(Check that all apply)</span></p>
+            <label for="hipPop/rap">
+                <input type="checkbox" id="hipPop/rap" name="music-genre" value="hipPop/rap">Hip-pop/Rap</input>
+            </label>
+            <label for="county">
+                <input type="checkbox" id="county" name="music-genre" value="country">Country</input>
+            </label>
+            <label for="r&b">
+                <input type="checkbox" id="r&b" name="music-genre" value="r&b">R&B</input>
+            </label>
+            <label for="alternative"> 
+                <input type="checkbox" id="alternative" name="music-genre" value="alternative">Alternative</input>
+        </div>
+        <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea name="comment" id="input-textarea" placeholder="Enter your comments here..."></textarea>
+        </div>
+        <div class="form-group">
+            <button id="submit-button" type="submit">Submit</button>
         </div>
       </form>
     </div>
