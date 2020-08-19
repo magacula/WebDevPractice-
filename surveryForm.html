@@ -166,9 +166,7 @@
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
 
-      button {
-        border: none;
-      }
+
 
       #input-textarea {
           max-height: 120px;
@@ -178,7 +176,8 @@
           resize: vertical;
       }
 
-      #submit-button {
+      .submit-button {
+        border: none;
         display: block;
         width: 100%;
         padding: 0.75rem;
@@ -284,7 +283,7 @@
             <textarea name="comment" id="input-textarea" placeholder="Enter your comments here..."></textarea>
         </div>
         <div class="form-group">
-            <button id="submit-button" type="submit">Submit</button>
+            <button id="submit" class="submit-button" type="submit">Submit</button>
         </div>
       </form>
     </div>
