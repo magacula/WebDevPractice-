@@ -93,8 +93,11 @@
     <!-- Header tag is another semantic html tag that allows assistive technologies 
         to locate certain sections of our code
     -->
+    <!-- In h1, we created an onclick event to change the text of our h1 element 
+      In an event, "this" refers to the element that received the event
+    -->
     <header>
-      <h1 id="header-title">Hi ! Welcome to my Page</h1>
+      <h1 id="header-title" onclick="this.innerHTML = 'Hi ! Welcome to my Page'""></h1>
       <h2 class="title-des" style="background-color: rgba(0,0,0,0);">This page will be used for strictly practice purposes</h2>
     </header>
     
