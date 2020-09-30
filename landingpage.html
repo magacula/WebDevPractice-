@@ -32,6 +32,12 @@
         background-color: #eee;
       }
 
+      @media (max-width: 600px) {
+        header {
+          flex-wrap: wrap;
+        }
+      }
+
       #header-img {
         width: 60vw;
       }
@@ -62,13 +68,11 @@
       }
 
       button {
-        padd
-      }
-
-      @media (max-width: 600px) {
-        header {
-          flex-wrap: wrap;
-        }
+        padding: 0 20px;
+        height: 40px;
+        font-size: 1em;
+        font-weight: 700;
+        text-transform: uppercase;
       }
     </style>
   </head>
@@ -83,9 +87,9 @@
 
       <nav id="nav-bar">
         <ul>
-          <li><a href="#features" id="nav-link">Features</a></li>
-          <li><a href="#how-it-works" id="nav-link">How It Works</a></li>
-          <li><a href="#pricing" id="nav-link">Pricing</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
         </ul>
       </nav>
     </header>
@@ -95,7 +99,7 @@
 
       <form id="form" action="https://www.freecodecamp.com/email-submit">
         <input
-          type="text"
+          type="email"
           name="email"
           id="email"
           placeholder="Enter your email"
