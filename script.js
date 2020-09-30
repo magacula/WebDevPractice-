@@ -65,3 +65,28 @@ const add = (x, y = 5) => {
   return x + 5; // y is 5 if it is not passed or undefined
 };
 console.log(add(3)); //only x is passed into add function (its value is 3)
+
+// Converting JSON data into JS Object and modifying html contents with data
+// text holds an person object (an array with 3 people objects)
+var text =
+  '{"employees":[' +
+  '{"firstName":"John","lastName":"Doe" },' +
+  '{"firstName":"Anna","lastName":"Smith" },' +
+  '{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+
+// Here, i use a built-in forEach loop to iterate through the array and print out the
+// employee object's first and last name (name-value pairs)
+obj.employees.forEach((element, index, array) => {
+  var first = obj.employees[index].firstName;
+  var last = obj.employees[index].lastName;
+  console.log(first + " " + last); // prints out first & last names
+
+  // console.log(element.firstName); // John, Anna, Peter
+  // console.log(index); // 0, 1, 2
+  //  console.log(array); // same myArray object 3 times
+});
+
+document.getElementById("demo").innerHTML =
+  obj.employees[0].firstName + " " + obj.employees[0].lastName;
