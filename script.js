@@ -37,7 +37,7 @@ function changeText(id) {
 </script> 
 */
 
-/////// JS ES6+ ////////////
+/////////////// JS ES6+ /////////////////////
 
 // Arrow functions
 // shortcut "nfn" creates a named function in ES7 syntax
@@ -90,3 +90,72 @@ obj.employees.forEach((element, index, array) => {
 
 document.getElementById("demo").innerHTML =
   obj.employees[0].firstName + " " + obj.employees[0].lastName;
+
+//////////// Fetch API (making asynchronous requests) (REQUEST/RESPONSE/Ajax) /////////////
+
+// Fetch allows us to access data (fetch resources) from an API
+// Fetch is function built into JavaScript that allows you to query any URL/API to get back data.
+
+// The most important part is that fetch is asynchronous
+// so it will run in the background and let you know when it finishes using promises
+
+// Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value
+
+// fetch() function takes in parameter of the path of a resource we want to fetch
+// In this case, the url of the API we want to fetch data from
+// we'll use a fake API to get back data. (fetches users)
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST", // need to pass in an HTTP method. Here we use a POST Request (sending data to server)
+  // We also need to set the headers (Tells fetch function we're passing JSON)
+  // setting the content type to application/json
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    userId: "11",
+    id: "101",
+    title: "test title",
+    body: "test body",
+  }),
+})
+  .then((res) => {
+    // console.log(res.json());
+    return res.json(); // fetch returns a response object (a promise)
+  })
+  //   .then((res) => {
+  //     if (res.ok) {
+  //       console.log("SUCESS");
+  //     } else {
+  //       console.log("FAILED");
+  //     }
+  //   })
+  .then((data) => console.log(data)) // returning another promise, but of the data we want
+  .catch((error) => console.log("ERROR")); //catching errors when response is returned
+
+//200 status code: the response has SUCCESSFULLY returned data from api
+//404 status code: the response has FAILED to return
+
+//////Another Example using fetch API///////
+
+//Add Event listener to handle event on click -> gets data from API
+document.getElementById("getData").addEventListener("click", getPosts);
+
+function getPosts() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => res.json())
+    .then((data) => {
+      let output = "<h2>POSTS</h2>";
+
+      //Uses a forEach loop to iterate through JSON
+      data.forEach((post) => {
+        //use template strings to output multiple lines of HTML
+        output += `
+        <div></div>
+        <h3>${post.title}</h3>
+        <p>${post.body}</p>
+        `;
+      });
+      console.log(output);
+      document.getElementById("output").innerHTML = output;
+    });
+}
