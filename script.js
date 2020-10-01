@@ -37,6 +37,44 @@ function changeText(id) {
 </script> 
 */
 
+//////// AJAX (Asynchronous Javascript & XML Practice //////////////
+/* 
+Set of web technologies to send/receive data between client & server asynchronously
+  - AJAX allows us to send requests asynchronously to server w/o refreshing our webpage
+*/
+
+// Here, we use a XMLHttpRequest() to get JSON from Cat Photo API
+
+// Create an EventHandler using the onclick property to process click events
+document.getElementById("getPhoto").onclick = () => {
+  // Create an instance of XMLHttpRequest Object to send a request to a server
+  const req = new XMLHttpRequest();
+  /* Use open method to initialize a request
+    -arg 1: the type of request we want to make (GET request is getting/retrieving data from the API)
+    -arg 2: the URL of the API we are requesting data from
+    -arg 3: a boolean value set to true, makes it a asynchronous request
+  */
+  req.open("GET", "https://www.freecodecamp.org/json/cats.json", true);
+  // Send method sends the request to a server
+  req.send();
+  // onclick event listener parses the returned data and applies the
+  // JSON.stringify method to convert JSON into string format
+  req.onload = () => {
+    const json = JSON.parse(req.responseText); // parses returned JSON data and saves into variable json
+    console.log(json);
+
+    // We access the first element of the json array and save the key value of imageLink
+    let getSrc = JSON.stringify(json[0].imageLink);
+    // Then we access the value of the altText key value
+    let getAlt = JSON.stringify(json[0].altText);
+
+    let html = "";
+    html += "<img src=" + getSrc + " alt=" + getAlt + "></img>";
+    console.log(html);
+    document.getElementById("outputPhoto").innerHTML = html; // renders our image by inserting it in string format into the HTML DOM
+  };
+};
+
 /////////////// JS ES6+ /////////////////////
 
 // Arrow functions
@@ -93,13 +131,15 @@ document.getElementById("demo").innerHTML =
 
 //////////// Fetch API (making asynchronous requests) (REQUEST/RESPONSE/Ajax) /////////////
 
-// Fetch allows us to access data (fetch resources) from an API
-// Fetch is function built into JavaScript that allows you to query any URL/API to get back data.
+/* 
+  Fetch allows us to access data (fetch resources) from an API
+  Fetch is function built into JavaScript that allows you to query any URL/API to get back data.
 
-// The most important part is that fetch is asynchronous
-// so it will run in the background and let you know when it finishes using promises
+  The most important part is that fetch is asynchronous
+  so it will run in the background and let you know when it finishes using promises
 
-// Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value
+  Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value
+*/
 
 // fetch() function takes in parameter of the path of a resource we want to fetch
 // In this case, the url of the API we want to fetch data from
@@ -137,18 +177,24 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 //////Another Example using fetch API///////
 
-//Add Event listener to handle event on click -> gets data from API
+// Add Event listener to handle event on click -> gets data from API
 document.getElementById("getData").addEventListener("click", getPosts);
 
+// function that fetches posts from jsonplaceholder API
 function getPosts() {
+  // fetch call makes a GET request to URI: shttps://jsonplaceholder.typicode.com/posts
+  // the method returns a promise
   fetch("https://jsonplaceholder.typicode.com/posts")
+    // if request is successful, the then method is executed converting to JSON format
     .then((res) => res.json())
+    // this then returns another promise and gets the data we want
     .then((data) => {
       let output = "<h2>POSTS</h2>";
 
-      //Uses a forEach loop to iterate through JSON
+      // Uses a forEach loop to iterate through JSON to display individual posts
       data.forEach((post) => {
-        //use template strings to output multiple lines of HTML
+        // retrieve title & body values using ${}
+        // use template strings to add multiple lines of HTML to DOM
         output += `
         <div></div>
         <h3>${post.title}</h3>
@@ -159,3 +205,17 @@ function getPosts() {
       document.getElementById("output").innerHTML = output;
     });
 }
+
+// Requesting data from a JSON file, by sending a GET request to users.json
+fetch("users.json", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((res) => {
+    // console.log(res.json());
+    return res.json(); // fetch returns a response object (a promise)
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.log("ERROR"));
