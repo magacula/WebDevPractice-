@@ -1,4 +1,4 @@
-///////////DOM Manipulation (Dynamic HTML)////////////////
+/////////////// DOM Manipulation (Dynamic HTML )  //////////////////////
 /** document is the document object that represents our webpage
  * This is an example how we change the inner HTML of an element
  *
@@ -11,7 +11,7 @@ document.getElementById("header-title").innerHTML = "Click me";
 // Changing the value of an attribute for an HTML element:
 // element.setAttribute(attribute, value)
 
-/////////////////////////// EVENTS //////////////////////////
+/////////////////////// Events ////////////////////////////
 // Adding Event Handlers
 document.getElementById("header2").onclick = function () {
   //changing the contents of the header upon click event
@@ -75,7 +75,7 @@ document.getElementById("getPhoto").onclick = () => {
   };
 };
 
-/////////////// JS ES6+ /////////////////////
+///////////////////// JS ES6+ es //////////////////////////
 
 // Arrow functions
 // shortcut "nfn" creates a named function in ES7 syntax
@@ -219,3 +219,24 @@ fetch("users.json", {
   })
   .then((data) => console.log(data))
   .catch((error) => console.log("ERROR"));
+
+const getPhotos = () => {
+  fetch("https://www.freecodecamp.org/json/cats.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let output = "";
+
+      data.forEach((value) => {
+        output += `
+      <img src="${value.imageLink}" alt="${value.altText}"></img>
+      `;
+      });
+      console.log(output);
+      document.getElementById("returnPhotos").innerHTML = output;
+    });
+};
+
+// Example of fetching images from an api by iterating over JSON array
+document.getElementById("getPhotos").addEventListener("click", getPhotos);
