@@ -186,7 +186,12 @@ function getPosts() {
   // the method returns a promise
   fetch("https://jsonplaceholder.typicode.com/posts")
     // if request is successful, the then method is executed converting to JSON format
-    .then((res) => res.json())
+    .then((res) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return res.json;
+    })
     // this then returns another promise and gets the data we want
     .then((data) => {
       let output = "<h2>POSTS</h2>";
@@ -207,12 +212,7 @@ function getPosts() {
 }
 
 // Requesting data from a JSON file, by sending a GET request to users.json
-fetch("users.json", {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-})
+fetch("users.json")
   .then((res) => {
     // console.log(res.json());
     return res.json(); // fetch returns a response object (a promise)
@@ -220,7 +220,7 @@ fetch("users.json", {
   .then((data) => console.log(data))
   .catch((error) => console.log("ERROR"));
 
-const getPhotos = () => {
+function getPhotos() {
   fetch("https://www.freecodecamp.org/json/cats.json")
     .then((res) => {
       return res.json();
@@ -229,14 +229,65 @@ const getPhotos = () => {
       let output = "";
 
       data.forEach((value) => {
-        output += `
-      <img src="${value.imageLink}" alt="${value.altText}"></img>
-      `;
+        output += `<img src="${value.imageLink}" alt="${value.altText}"></img>`;
       });
       console.log(output);
       document.getElementById("returnPhotos").innerHTML = output;
     });
-};
+}
 
 // Example of fetching images from an api by iterating over JSON array
 document.getElementById("getPhotos").addEventListener("click", getPhotos);
+
+/////////////  Callback  //////////
+
+// Callback example
+
+// create an array to mimic blog posts
+const posts = [
+  { title: "Post One", body: "This is the post one." },
+  { title: "Post Two", body: "This is post two." },
+];
+
+function getPosts() {
+  setTimeout(() => {
+    let output = "";
+    posts.forEach((post, index) => {
+      output += `<li>${post.title}</li>`;
+    });
+    document.getElementById("blog-posts").innerHTML = output;
+  }, 1000); // set timeout to 1000 ms (1 sec)
+  // Will execute right away if we don't include a callback function
+  // (wont be able to call createPost in time)
+}
+
+function createPost(post, callbacks) {
+  // setTimeout calls or evaluates an expression after a specific amount of milliseconds
+  setTimeout(() => {
+    posts.push(post);
+    callbacks();
+  }, 2000); // call function total execution time in 2 secs
+}
+
+// By using callback() function, this createPost call waited 2 seconds so we
+// could fetch posts and create them at the same time
+// The longest timeout is how long it will take for the the browser to render the function
+createPost({ title: "Post Three", body: "This is post three" }, getPosts);
+
+////// Async / Await with Fetch ////
+// use async keyword to use async function
+async function fetchUsers() {
+  try {
+    // await keyword allows a function to wait for an asynchronous process or action to complete before being called
+    // we want to wait for fetch to be complete before we get the data from the response
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+    const data = await res.json();
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+fetchUsers();
