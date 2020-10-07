@@ -97,8 +97,8 @@ p = new Person("Makoi", "Gacula");
 console.log(p);
 
 // ES6+ allows function parameters to have default values
-// aruments are what we pass into the function
-// parameters are what we specify in func declaration
+// arguments are what we pass into the function
+// parameters are what we specify in function declaration
 const add = (x, y = 5) => {
   return x + 5; // y is 5 if it is not passed or undefined
 };
@@ -144,6 +144,7 @@ document.getElementById("demo").innerHTML =
 // fetch() function takes in parameter of the path of a resource we want to fetch
 // In this case, the url of the API we want to fetch data from
 // we'll use a fake API to get back data. (fetches users)
+// Method returns a promise
 fetch("https://jsonplaceholder.typicode.com/posts", {
   method: "POST", // need to pass in an HTTP method. Here we use a POST Request (sending data to server)
   // We also need to set the headers (Tells fetch function we're passing JSON)
@@ -183,11 +184,12 @@ document.getElementById("getData").addEventListener("click", getPosts);
 // function that fetches posts from jsonplaceholder API
 function getPosts() {
   // fetch call makes a GET request to URI: shttps://jsonplaceholder.typicode.com/posts
-  // the method returns a promise
+  // this method returns a promise
   fetch("https://jsonplaceholder.typicode.com/posts")
-    // if request is successful, the then method is executed converting to JSON format
+    // if request is successful, the then method is executed taking the response and converting it to JSON
     .then((res) => {
-      if (!response.ok) {
+      // if the response is not successful then print error message
+      if (!res.ok) {
         throw Error("ERROR");
       }
       return res.json;
@@ -195,7 +197,6 @@ function getPosts() {
     // this then returns another promise and gets the data we want
     .then((data) => {
       let output = "<h2>POSTS</h2>";
-
       // Uses a forEach loop to iterate through JSON to display individual posts
       data.forEach((post) => {
         // retrieve title & body values using ${}
@@ -213,9 +214,10 @@ function getPosts() {
 
 // Requesting data from a JSON file, by sending a GET request to users.json
 fetch("users.json")
+  // fetch returns a response object (a promise)
   .then((res) => {
     // console.log(res.json());
-    return res.json(); // fetch returns a response object (a promise)
+    return res.json();
   })
   .then((data) => console.log(data))
   .catch((error) => console.log("ERROR"));
@@ -239,6 +241,34 @@ function getPhotos() {
 // Example of fetching images from an api by iterating over JSON array
 document.getElementById("getPhotos").addEventListener("click", getPhotos);
 
+//////// using fetch and Currency API to convert USD to different currency's /////////////
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#currency-form").onsubmit = () => {
+    fetch("https://api.exchangeratesapi.io/latest?base=USD")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const currency = document.querySelector("#currency").value;
+        console.log(currency);
+
+        const rate = data.rates[currency];
+        console.log(rate);
+
+        if (rate !== undefined) {
+          document.querySelector(
+            "#result"
+          ).innerHTML = `1 USD is equal to ${rate.toFixed(3)}`;
+        } else {
+          document.querySelector("#result").innerHTML = "Invalid currency";
+        }
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
+  };
+});
+
 /////////////  Callback  //////////
 
 // Callback example
@@ -249,11 +279,11 @@ const posts = [
   { title: "Post Two", body: "This is post two." },
 ];
 
-function getPosts() {
+function getBlogPosts() {
   setTimeout(() => {
     let output = "";
-    posts.forEach((post, index) => {
-      output += `<li>${post.title}</li>`;
+    posts.forEach((p, index) => {
+      output += `<li>${p.title}</li>`;
     });
     document.getElementById("blog-posts").innerHTML = output;
   }, 1000); // set timeout to 1000 ms (1 sec)
@@ -272,10 +302,11 @@ function createPost(post, callbacks) {
 // By using callback() function, this createPost call waited 2 seconds so we
 // could fetch posts and create them at the same time
 // The longest timeout is how long it will take for the the browser to render the function
-createPost({ title: "Post Three", body: "This is post three" }, getPosts);
+createPost({ title: "Post Three", body: "This is post three" }, getBlogPosts);
 
-////// Async / Await with Fetch ////
+////////////// Async / Await with Fetch /////////
 // use async keyword to use async function
+/*
 async function fetchUsers() {
   try {
     // await keyword allows a function to wait for an asynchronous process or action to complete before being called
@@ -291,3 +322,45 @@ async function fetchUsers() {
 }
 
 fetchUsers();
+*/
+
+////// Destructuring Assignment //////
+/* 
+  Destructuring assignment is special syntax introduced in ES6, for neatly extracting values from an object
+  and assign them to variables
+*/
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80,
+};
+
+const { today, tomorrow } = HIGH_TEMPERATURES;
+console.log(today, tomorrow);
+
+// Using Destructuring Assignment to assign variables from Arrays
+const c = [1, 2];
+[a, b] = c;
+
+console.log(a, b);
+
+////// Practice using Template Literals. They allow us to make multi-line strings
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"],
+};
+
+const makeList = (arr) => {
+  const failureItems = [];
+
+  // Loop over array retrieving values from failure property
+  arr.forEach((value, index) => {
+    failureItems.push(`<li class="text-warning">${arr[index]}</li>`);
+  });
+
+  return failureItems;
+};
+
+const failuresList = makeList(result.failure);
+console.log(failuresList);
